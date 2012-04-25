@@ -1,0 +1,8 @@
+{
+    "mongoose":{
+        "db":"neblog"
+    },
+    "server":{
+        "port":3000
+    }
+}
