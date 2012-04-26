@@ -22,84 +22,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="member_test.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/member_test.js">
+      <file leaf-file-name="Menu_Helper.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Menu_Helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.62616825">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mixin_start_mongoose.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/mixins/mixin_start_mongoose.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="8" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rest_action.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions/rest_action/rest_action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="39" selection-start="289" selection-end="289" vertical-scroll-proportion="-5.769231">
+            <state line="20" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/support/mongoose_model/index.js">
+        <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Req_State/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="10" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
+            <state line="69" column="59" selection-start="2402" selection-end="2402" vertical-scroll-proportion="-5.576923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="express_body_parser.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/resources/express_helpers/express_body_parser.js">
+      <file leaf-file-name="layout.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="7" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+            <state line="2" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.046875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Resource/index.js">
+      <file leaf-file-name="Flash_View_Helper.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/resources/view_helpers/Flash_View_Helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc;n#Res#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Resources.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/utility/handler/Resources.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="81" selection-start="6968" selection-end="6968" vertical-scroll-proportion="-90.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
+            <state line="48" column="14" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,28 +68,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/components/com_members/controllers/con_rest/actions/rest_action.js" />
-        <option value="$PROJECT_DIR$/app/components/com_members/controllers/con_rest/actions/rest_action/rest_config.js" />
-        <option value="$PROJECT_DIR$/app/components/com_members/controllers/con_rest/actions/rest_action/rest_config.json" />
-        <option value="$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions/signin_action/signin_view.html" />
-        <option value="$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions/leave_action/leave_view.html" />
-        <option value="$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions/enter_action/enter_view.html" />
-        <option value="$PROJECT_DIR$/frame_config.json" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/node_modules/nuby-express/node_modules/support/mongoose_model/index.js" />
+        <option value="$PROJECT_DIR$/app/con_home/actions/home_action/home_config.json" />
+        <option value="$PROJECT_DIR$/app/con_home/actions/home_action/home_action.js" />
+        <option value="$PROJECT_DIR$/app/con_home/actions/home/home_view.html" />
+        <option value="$PROJECT_DIR$/views/layout.html" />
+        <option value="$PROJECT_DIR$/node_modules/nuby-express/lib/Action/index.js" />
         <option value="$PROJECT_DIR$/node_modules/support/mongoose_model/index.js" />
-        <option value="$PROJECT_DIR$/app/resources/express_resource/express_body_parser.js" />
+        <option value="$PROJECT_DIR$/app/con_home/actions/home/home_action.js" />
+        <option value="$PROJECT_DIR$/TODO.md" />
+        <option value="$PROJECT_DIR$/app/resources/view_helpers/Menu_Helper.js" />
+        <option value="$PROJECT_DIR$/app/resources/express_helpers/express_view.js" />
+        <option value="$PROJECT_DIR$/node_modules/nuby-express/lib/Loader/index.js" />
         <option value="$PROJECT_DIR$/node_modules/nuby-express/lib/utility/handler/Resources.js" />
-        <option value="$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions/rest_action/rest_action.js" />
-        <option value="$PROJECT_DIR$/app/resources/mixins/mixin_start_mongoose.js" />
-        <option value="$PROJECT_DIR$/web.js" />
-        <option value="$PROJECT_DIR$/tests/member_test.js" />
+        <option value="$PROJECT_DIR$/node_modules/nuby-express/lib/Helpers/View.js" />
+        <option value="$PROJECT_DIR$/app/resources/view_helpers/Flash_View_Helper.js" />
+        <option value="$PROJECT_DIR$/node_modules/nuby-express/lib/Req_State/index.js" />
+        <option value="$PROJECT_DIR$/app/views/layout.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="227" />
-    <option name="y" value="102" />
+    <option name="x" value="374" />
+    <option name="y" value="105" />
     <option name="width" value="1291" />
     <option name="height" value="812" />
   </component>
@@ -269,7 +222,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,6 +239,58 @@
               <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nuby-express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_express_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_express_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nuby-express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_express_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_express_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nuby-express" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Req_State" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -298,6 +303,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_express_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test_express_3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,7 +342,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mixins" />
+              <option name="myItemId" value="view_helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,19 +378,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_members" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="express_helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,19 +400,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_members" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="con_members" />
+              <option name="myItemId" value="con_home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -405,7 +408,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rest_action" />
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,18 +431,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com_members" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="con_members" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,10 +449,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/node_modules/nuby-express/node_modules/support/mongoose_model" />
       <recent name="$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/unused_tests" />
       <recent name="$PROJECT_DIR$/app/components/com_members/controllers/con_rest/actions/rest_action" />
     </key>
   </component>
@@ -531,14 +527,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="227" y="102" width="1291" height="812" extended-state="0" />
+    <frame x="374" y="105" width="1291" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31982633" sideWeight="0.996063" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27760252" sideWeight="0.68017364" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27760252" sideWeight="0.74973714" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39942113" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -608,42 +604,37 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/tests/REST_test.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/node_modules/express/node_modules/mime/mime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="38" selection-start="612" selection-end="909" vertical-scroll-proportion="0.36945814" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="0" selection-end="648" vertical-scroll-proportion="0.0">
+        <state line="60" column="2" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.33254156">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions/rest_action/rest_config.json">
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="81" selection-end="81" vertical-scroll-proportion="0.12295082">
+        <state line="454" column="60" selection-start="10696" selection-end="10696" vertical-scroll-proportion="-57.884617">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/node_modules/support/mongoose_model/index.js">
+    <entry file="file://$PROJECT_DIR$/app/resources/express_helpers/express_view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="5" selection-start="846" selection-end="897" vertical-scroll-proportion="0.0">
+        <state line="7" column="46" selection-start="217" selection-end="217" vertical-scroll-proportion="-1.9090909">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/support/mongoose_model/index.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/support/gate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="10" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
+        <state line="57" column="43" selection-start="1433" selection-end="1451" vertical-scroll-proportion="0.38311687">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/express_helpers/express_body_parser.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Helpers/View.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+        <state line="4" column="1" selection-start="92" selection-end="92" vertical-scroll-proportion="0.064935066">
           <folding />
         </state>
       </provider>
@@ -651,71 +642,78 @@
     <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Resource/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc;n#Res#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/utility/handler/Resources.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Loader/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="81" selection-start="6968" selection-end="6968" vertical-scroll-proportion="-90.0">
+        <state line="120" column="32" selection-start="3645" selection-end="3645" vertical-scroll-proportion="1.9480519">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Component/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.14610389">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Action/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2012987">
+          <folding>
+            <element signature="e#5634#6507#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Framework/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8147268">
+        <state line="95" column="0" selection-start="3070" selection-end="3070" vertical-scroll-proportion="0.54545456">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/frame_config.json">
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/utility/handler/Resources.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="37" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.25974026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Loader/Path_Handler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/Menu_Helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
+        <state line="20" column="0" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/com_members/controllers/con_members/actions/rest_action/rest_action.js">
+    <entry file="file://$PROJECT_DIR$/app/resources/view_helpers/Flash_View_Helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="39" selection-start="289" selection-end="289" vertical-scroll-proportion="-5.769231">
+        <state line="48" column="14" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/resources/mixins/mixin_start_mongoose.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/nuby-express/lib/Req_State/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+        <state line="69" column="59" selection-start="2402" selection-end="2402" vertical-scroll-proportion="-5.576923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="8" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/com_members/resources/models/model_members.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="5" selection-start="353" selection-end="353" vertical-scroll-proportion="0.28037384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/member_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.62616825">
+        <state line="2" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.046875">
           <folding />
         </state>
       </provider>

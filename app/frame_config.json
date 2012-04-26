@@ -4,5 +4,11 @@
     },
     "server":{
         "port":3000
+    },
+    "session": {
+        "secret": "Theonious monk"
+    },
+    "view": {
+        "root": "/views"
     }
 }
