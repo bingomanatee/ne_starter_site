@@ -1,4 +1,13 @@
 <html>
+<head>
+    <% javascript.forEach(function(js, i){ %>
+    <script language="javascript" src="<%= js %>"><%= i %></script>
+    <% }) %>
+
+    <% css.forEach(function(c) { %>
+    <link href="<%= c %>" media="all" rel="stylesheet" type="text/css" />
+    <% }) %>
+</head>
 <body>
 <%- helpers.flash() %>
 <h1>Member Test</h1>

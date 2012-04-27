@@ -1,0 +1,5 @@
+{
+    "javascript":["/javascript/DataTables-1.9.1/media/js/jquery.dataTables.js"],
+    "route": "/admin/members/list",
+    "css": "/javascript/DataTables-1.9.1/media/css/jquery.dataTables.css"
+}

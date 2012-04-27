@@ -7,13 +7,11 @@ var new_member;
 module.exports = {
 
     setup:function (test) {
-        member_model.model.remove({}, function(err){
-            if (err) throw err;
-
-        });
         new_member = {name:'foo', email:'foo@bar.com'};
         web({port:3001, mongoose:{db:'member_test'}}, function () {
-            test.done();
+            member_model.empty(function(){
+                test.done();
+            })
         })
     },
 
@@ -35,10 +33,20 @@ module.exports = {
                 request.get(uri + 'members/' + id, function (err, res, gbody) {
                     console.log('getting ' + gbody);
                     test.deepEqual(body, gbody, 'get gets same member back');
-                    test.done();
+                    member_model.model.remove({}, function (err) {
+                        if (err) throw err;
+                        test.done();
+
+                    });
                 });
 
             });
 
+    },
+
+    test_done:function (test) {
+        framework.server().close();
+        test.done;
     }
+
 }

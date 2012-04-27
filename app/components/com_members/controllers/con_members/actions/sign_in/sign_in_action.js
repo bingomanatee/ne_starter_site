@@ -7,6 +7,15 @@ module.exports = {
         this.on_get_process(rs, {});
     },
 
+    on_get_process:function (rs, input) {
+        if (!input.member) {
+            input.member = {username:'', password:''};
+        }
+        this.on_output(rs, input);
+    },
+
+    /* ****************** FORM SUBMISSION ****************** */
+
     on_post:function (rs) {
         this.on_post_validate(rs);
     },
@@ -66,12 +75,5 @@ module.exports = {
                     }
                 }
             });
-    },
-
-    on_get_process:function (rs, input) {
-        if (!input.member) {
-            input.member = {username:'', password:''};
-        }
-        this.on_output(rs, input);
     }
 }

@@ -30,7 +30,9 @@ module.exports = function (config, callback) {
             if (callback) {
                 callback();
             }
-        })
+        });
     }
-}
+
+    return frame;
+};
 

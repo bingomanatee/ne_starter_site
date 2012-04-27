@@ -1,0 +1,31 @@
+<h1>Members</h1>
+
+<table class="display"  id="members_list">
+<thead>
+<th>_id</th>
+<th>email</th>
+<th>name</th>
+<th>username</th>
+</thead>
+    <tbody><tr><td>loading data...</td></tr></tbody>
+    <tfoot>
+    <th>_id</th>
+    <th>email</th>
+    <th>name</th>
+    <th>username</th>
+    </tfoot>
+</table>
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('#members_list').dataTable( {
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "/admin/members/list.json",
+            "sScrollY": "300",
+            bPaginate: false,
+            sScrollX: "100%",
+            sScrollXInner: "120%"
+        } );
+    } );
+</script>
