@@ -1,0 +1,16 @@
+<h2>Enter</h2>
+<form action="/sign_in" method="post" class="sign_in_form" id="member_enter">
+<div class="field_row" id="member_enter_username_row">
+<label>Username or Email</label>
+<input type="text" name="member[username]" id="enter_member_username"
+value="<%= (member && member.username) ? member.username : "" %>" />
+</div>
+<div class="field_row" id="member_enter_password_row">
+<label>Password</label>
+<input type="password" name="member[password]" id="enter_member_password"
+value="<%= (member && member.password) ? member.password : "" %>" />
+</div>
+<div class="submit_row" id="member_enter_button_row">
+<button type="submit">Sign In</button>
+</div>
+</form>

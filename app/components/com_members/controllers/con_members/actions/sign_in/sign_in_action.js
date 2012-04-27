@@ -1,3 +1,6 @@
+var util = require('util');
+
+
 module.exports = {
     on_get:function (rs) {
         //@TODO: handle old input
@@ -23,16 +26,18 @@ module.exports = {
             }
         }
         if (err) {
-            this.on_get_process(rs, rs.req_props.member);
+            this.on_get_process(rs, rs.req_props);
         } else {
-            this.on_post_process(rs.rs.req_props.member);
+            this.on_post_process(rs, rs.req_props);
         }
     },
 
-    on_post_process:function (rs, member) {
+    on_post_process:function (rs, input) {
         var self = this;
+        var signup_member = input.member;
+        console.log(util.inspect(input));
 
-        this.models.members_members.find({password:member.password},
+        this.models.members_members.find({password:signup_member.password},
             function (err, members) {
                 if (err) {
                     self.flash('error', err.toString());
@@ -41,22 +46,23 @@ module.exports = {
                     var found = false;
                     members.forEach(function (m) {
                         if (
-                            (m.name == member.username) ||
-                                (m.username == member.username) ||
-                                (m.email == member.username)
+                            (m.name == signup_member.username) ||
+                                (m.username == signup_member.username) ||
+                                (m.email == signup_member.username)
                             ) {
                             found = m;
                         }
                         // we will return the LAST match
                         //@TODO: track multiple matches.
                     });
-                    if (found){
-                        rs.req.session.member_id = member._id.toString();
-                        rs.flash('info', 'You are now logged in as ' + member.username);
-                        rs.req.redirect('/');
+                    if (found) {
+                        rs.req.session.member_id = found._id.toString();
+                        rs.flash('info',  util.format('You are now logged in as %s (%s) ',
+                             found.name, found.username));
+                        rs.go('/');
                     } else {
-                        self.flash('error', 'cannot find user with that information');
-                        self.on_get_process(rs, member);
+                        rs.flash('error', 'cannot find user with that information');
+                        self.on_get_process(rs, input);
                     }
                 }
             });

@@ -1,7 +1,13 @@
 <html>
 <body>
 <%- helpers.flash() %>
-<h2>Welcome to Membership</h2>
+<h1>Member Test</h1>
+<% if (current_member) { %>
+<p><%= current_member.name %> (<a href="/sign_out">Sign Out</a>)</p>
+
+<% } else { %>
+<a href="/sign_in">Sign In</a>
+<% } %>
 <%- body %>
 </body>
 </html>

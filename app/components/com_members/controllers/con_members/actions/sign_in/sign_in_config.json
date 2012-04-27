@@ -1,0 +1,5 @@
+{
+    "method": "*",
+    "get_route": "/sign_in",
+    "post_route": "/sign_in"
+}

@@ -1,5 +1,0 @@
-{
-    "method": "*",
-    "get_route": "/enter",
-    "post_route": "/enter"
-}
