@@ -1,13 +1,20 @@
 var _ = require('underscore');
 var util = require('util');
 var columns = ['_id', 'username', 'name', 'email'];
+var ObjectID = require('mongodb').BSONPure.ObjectID;
 
 function _query(search, cols) {
     var terms = [];
     cols.forEach(function (col) {
         if (col.searchable) {
             var match = {};
-            if (isNaN(search.value)) {
+            if (col.field == '_id') {
+                try {
+                    match[col.field] = new ObjectID(search.value);
+                } catch (err){
+                    return;
+                }
+            } else if (isNaN(search.value)) {
                 match[col.field] = new RegExp('.*' + search.value + '.*');
             } else {
                 match[col.field] = search.value;
@@ -41,6 +48,7 @@ module.exports = {
                 data[key] = (value == 'true') ? true : false;
             }
         });
+        console.log('data query: %s', util.inspect(data));
 
         var schema = [];
         var search = {value:data.sSearch, regex:data.bRegex}
@@ -48,8 +56,8 @@ module.exports = {
         columns.forEach(function (field, index) {
             var cell = {
                 field:field,
-                searchable:data['bSearchable_' + i],
-                regex:data['bRegex_' + i]
+                searchable:data['bSearchable_' + index],
+                regex:data['bRegex_' + index]
             };
             schema.push(cell);
         });
@@ -58,27 +66,23 @@ module.exports = {
         for (var i = 0; i < data.iSortingCols; ++i) {
             var dir = (data['sSortDir_' + i] == 'asc') ? 1 : -1;
             var sort_desc = [columns[data['iSortCol_' + i]], dir];
-            sort.push(sort_desc);
+            sort = sort.concat(sort_desc);
         }
 
         var query = search.value ? _query(search, schema) : {};
 
-        this.on_process(rs, {sEcho: data.sEcho, skip: data.iDisplayStart, limit: data.iDisplayLength, query:query, schema:schema, sort:sort});
+        this.on_process(rs, {sEcho:data.sEcho, skip:data.iDisplayStart, limit:data.iDisplayLength, query:query, schema:schema, sort:sort});
     },
 
     on_process:function (rs, input) {
-        console.log('input: %s', util.inspect(input));
+        console.log('input: %s', util.inspect(input, true, 3));
         var dis_count = 0;
         var self = this;
-        var query2 = self.models.members_members.find(input.query, columns)
-            .skip(input.skip).limit(input.limit);
-        query2.exec(function (err, data) {
-            console.log('executing query %s: %s',util.inspect(query2), util.inspect(data));
-        });
 
 
         self.models.members_members.count(function (err, count) {
-            var query = self.models.members_members.find(input.query, columns)
+            var query = self.models.members_members.find(input.query, columns);
+            query.sort.apply(query, input.sort)
                 .skip(input.skip).limit(input.limit);
 
             var stream = query.stream();
@@ -108,7 +112,7 @@ module.exports = {
             stream.on('close', function () {
                 console.log('closing stream');
                 rs.res.write('],');
-                rs.res.write(JSON.stringify({iTotalDisplayRecords:dis_count}).replace(/^\{/, ''));
+                rs.res.write(JSON.stringify({iTotalDisplayRecords:count}).replace(/^\{/, ''));
                 rs.res.end();
             });
 
