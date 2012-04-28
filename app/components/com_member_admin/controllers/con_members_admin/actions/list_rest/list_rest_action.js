@@ -7,7 +7,7 @@ function _query(search, cols) {
     cols.forEach(function (col) {
         if (col.searchable) {
             var match = {};
-            if(isNaN(search.value)){
+            if (isNaN(search.value)) {
                 match[col.field] = new RegExp('.*' + search.value + '.*');
             } else {
                 match[col.field] = search.value;
@@ -16,17 +16,17 @@ function _query(search, cols) {
         }
     });
 
-    switch(terms.length){
+    switch (terms.length) {
         case 0:
             return {};
-        break;
+            break;
 
         case 1:
             return terms[0];
-        break;
+            break;
 
         default:
-            return {"$or": terms}
+            return {"$or":terms}
     }
 }
 
@@ -34,18 +34,13 @@ module.exports = {
 
     on_input:function (rs) {
         var data = rs.req_props;
-        _.each(data, function(value, key){
-            if (/^i/.test(key)){
+        _.each(data, function (value, key) {
+            if (/^i/.test(key)) {
                 data[key] = parseInt(value);
-            } else if (/^b/.test(key)){
+            } else if (/^b/.test(key)) {
                 data[key] = (value == 'true') ? true : false;
             }
         });
-        console.log('data: %s', util.inspect(data));
-        var range = {
-            from:data.iDisplayStart,
-            size:data.iDisplayLength
-        };
 
         var schema = [];
         var search = {value:data.sSearch, regex:data.bRegex}
@@ -62,40 +57,63 @@ module.exports = {
         var sort = [];
         for (var i = 0; i < data.iSortingCols; ++i) {
             var dir = (data['sSortDir_' + i] == 'asc') ? 1 : -1;
-            var sort_desc = [data['iSortCol_' + i], dir];
+            var sort_desc = [columns[data['iSortCol_' + i]], dir];
             sort.push(sort_desc);
         }
 
         var query = search.value ? _query(search, schema) : {};
 
-        this.on_process(rs, {range:range, query: query, schema:schema, sort:sort});
+        this.on_process(rs, {sEcho: data.sEcho, skip: data.iDisplayStart, limit: data.iDisplayLength, query:query, schema:schema, sort:sort});
     },
 
     on_process:function (rs, input) {
-        console.log('input: %s', util.inspect(rs.req));
+        console.log('input: %s', util.inspect(input));
+        var dis_count = 0;
+        var self = this;
+        var query2 = self.models.members_members.find(input.query, columns)
+            .skip(input.skip).limit(input.limit);
+        query2.exec(function (err, data) {
+            console.log('executing query %s: %s',util.inspect(query2), util.inspect(data));
+        });
 
-        var query = this.models.members_members.find(input.query, columns).slice([input.range.from, input.range.size]);
-        var stream = query.stream();
-        rs.res.write('[');
-        var first = true;
 
-        stream.on('data', function (doc) {
-            if (first){
-                first = false;
-            } else {
-                rs.res.write(',');
-            }
-            rs.res.write(JSON.stringify(doc.toJSON()));
-        })
+        self.models.members_members.count(function (err, count) {
+            var query = self.models.members_members.find(input.query, columns)
+                .skip(input.skip).limit(input.limit);
 
-        stream.on('error', function (err) {
-            throw err;
-        })
+            var stream = query.stream();
+            rs.res.write(JSON.stringify({sEcho:input.sEcho, iTotalRecords:count, aaData:[] }).replace(/\]\}$/, ''));
+            var first = true;
 
-        stream.on('close', function () {
-            rs.res.write(']');
-            rs.res.end();
-        })
+            stream.on('data', function (doc) {
+                ++dis_count;
+                if (first) {
+                    first = false;
+                } else {
+                    rs.res.write(',');
+                }
+                var out = [];
+
+                columns.forEach(function (col) {
+                    out.push(doc[col]);
+                });
+                rs.res.write(JSON.stringify(out));
+            });
+
+            stream.on('error', function (err) {
+                console.log('error in stream: %s', err);
+                throw err;
+            });
+
+            stream.on('close', function () {
+                console.log('closing stream');
+                rs.res.write('],');
+                rs.res.write(JSON.stringify({iTotalDisplayRecords:dis_count}).replace(/^\{/, ''));
+                rs.res.end();
+            });
+
+
+        });
     }
 
 }

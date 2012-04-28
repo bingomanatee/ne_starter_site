@@ -6,7 +6,8 @@ module.exports = function(){
 
     if (!_model){
         _model = mm.create({
-            "name": {type: String, required: true},
+            "name": {type: String, required: false},
+            "username": {type: String, required: true},
             "email" : {type: String, required: true},
             "password": {type: String, require: true}
         }, {name: "members_members", type: "model"})

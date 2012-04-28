@@ -28,8 +28,8 @@ module.exports = {
     on_put:function (rs) {
         var self = this;
         var mm = this.models.members_members.model;
-        console.log('mmm = %s', util.inspect(mm));
-        console.log('putting member %s', util.inspect(rs.req_props));
+      //  console.log('mmm = %s', util.inspect(mm));
+       // console.log('putting member %s', util.inspect(rs.req_props));
         var new_member = new mm(rs.req_props);
         new_member.validate(function (err) {
             if (err) {

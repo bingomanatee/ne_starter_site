@@ -67,8 +67,12 @@ function _make_members(test) {
             }
         }
 
-        fs.writeFile(__dirname + '/member_stram_test.last_dataset.json', JSON.stringify(result));
-        test.done();
+        fs.writeFile(__dirname + '/member_stram_test.last_dataset.json', JSON.stringify(result),
+            function () {
+                console.log('wrote result');
+                test.done();
+            }
+        );
     });
 }
 
@@ -77,12 +81,9 @@ var framework;
 module.exports = {
 
     setup:function (test) {
-        new_member = {name:'foo', email:'foo@bar.com'};
-        framework = web({port:3001, mongoose:{db:'member_test'}}, function () {
-            member_model.model.remove({}, function (err) {
-                if (err) {
-                    throw err;
-                }
+        new_member = {name: "Bob", username:'foo', email:'foo@bar.com'};
+        framework = web({port:3001, mongoose:{db:'member_stream_test'}}, function () {
+            member_model.empty(function(){
                 _make_members(test);
             });
         });
@@ -95,12 +96,39 @@ module.exports = {
                 if (e) {
                     throw e;
                 }
-                test.done();
+                fs.writeFile(__dirname + '/list_10.json', body, function () {
+                    test.done();
+                });
             });
 
     },
 
-    test_done: function(test){
+    test_member_REST:function (test) {
+
+        request.put({uri:uri + 'members', form:new_member},
+            function (e, res, body) {
+                try {
+                    var parsed_member = JSON.parse(body);
+                } catch (err) {
+                    test.ok(false, 'cannot parse ' + body + err.toString());
+                    return test.done();
+                }
+
+                var id = parsed_member['_id'];
+                delete parsed_member._id;
+                test.deepEqual(parsed_member, new_member, 'added new member');
+
+                request.get(uri + 'members/' + id, function (err, res, gbody) {
+                    //    console.log('getting ' + gbody);
+                    test.deepEqual(body, gbody, 'get gets same member back');
+                    test.done();
+                });
+
+            });
+
+    },
+
+    test_done:function (test) {
         framework.server().close();
         test.done();
     }
