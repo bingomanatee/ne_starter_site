@@ -78,7 +78,7 @@ var jQuery = function( selector, context ) {
 	// Promise methods
 	promiseMethods = "then done fail isResolved isRejected promise".split( " " ),
 
-	// The ready event handler
+	// The ready event handlers
 	DOMContentLoaded,
 
 	// Save a reference to some core methods
@@ -769,7 +769,7 @@ jQuery.extend({
 			};
 		}
 
-		// Set the guid of unique handler to the same of original handler, so it can be removed
+		// Set the guid of unique handlers to the same of original handlers, so it can be removed
 		if ( fn ) {
 			proxy.guid = fn.guid = fn.guid || proxy.guid || jQuery.guid++;
 		}
@@ -2238,15 +2238,15 @@ jQuery.event = {
 			var handlers = events[ type ],
 				special = jQuery.event.special[ type ] || {};
 
-			// Init the event handler queue
+			// Init the event handlers queue
 			if ( !handlers ) {
 				handlers = events[ type ] = [];
 
-				// Check for a special event handler
+				// Check for a special event handlers
 				// Only use addEventListener/attachEvent if the special
-				// events handler returns false
+				// events handlers returns false
 				if ( !special.setup || special.setup.call( elem, data, namespaces, eventHandle ) === false ) {
-					// Bind the global event handler to the element
+					// Bind the global event handlers to the element
 					if ( elem.addEventListener ) {
 						elem.addEventListener( type, eventHandle, false );
 
@@ -2264,7 +2264,7 @@ jQuery.event = {
 				}
 			}
 
-			// Add the function to the element's handler list
+			// Add the function to the element's handlers list
 			handlers.push( handleObj );
 
 			// Keep track of which events have been used, for global triggering
@@ -2357,7 +2357,7 @@ jQuery.event = {
 				handleObj = eventType[ j ];
 
 				if ( handler.guid === handleObj.guid ) {
-					// remove the given handler for the given type
+					// remove the given handlers for the given type
 					if ( all || namespace.test( handleObj.namespace ) ) {
 						if ( pos == null ) {
 							eventType.splice( j--, 1 );
@@ -2374,7 +2374,7 @@ jQuery.event = {
 				}
 			}
 
-			// remove generic event handler if no more handlers exist
+			// remove generic event handlers if no more handlers exist
 			if ( eventType.length === 0 || pos != null && eventType.length === 1 ) {
 				if ( !special.teardown || special.teardown.call( elem, namespaces ) === false ) {
 					jQuery.removeEvent( elem, type, elemData.handle );
@@ -2553,7 +2553,7 @@ jQuery.event = {
 
 				// Filter the functions by class
 				if ( all || namespace_re.test( handleObj.namespace ) ) {
-					// Pass in a reference to the handler function itself
+					// Pass in a reference to the handlers function itself
 					// So that we can later remove it
 					event.handler = handleObj.handler;
 					event.data = handleObj.data;
@@ -2579,7 +2579,7 @@ jQuery.event = {
 		return event.result;
 	},
 
-	props: "altKey attrChange attrName bubbles button cancelable charCode clientX clientY ctrlKey currentTarget data detail eventPhase fromElement handler keyCode layerX layerY metaKey newValue offsetX offsetY pageX pageY prevValue relatedNode relatedTarget screenX screenY shiftKey srcElement target toElement view wheelDelta which".split(" "),
+	props: "altKey attrChange attrName bubbles button cancelable charCode clientX clientY ctrlKey currentTarget data detail eventPhase fromElement handlers keyCode layerX layerY metaKey newValue offsetX offsetY pageX pageY prevValue relatedNode relatedTarget screenX screenY shiftKey srcElement target toElement view wheelDelta which".split(" "),
 
 	fix: function( event ) {
 		if ( event[ jQuery.expando ] ) {
@@ -2706,7 +2706,7 @@ jQuery.Event = function( src ) {
 		this.type = src.type;
 
 		// Events bubbling up the document may have been marked as prevented
-		// by a handler lower down the tree; reflect the correct value.
+		// by a handlers lower down the tree; reflect the correct value.
 		this.isDefaultPrevented = (src.defaultPrevented || src.returnValue === false ||
 			src.getPreventDefault && src.getPreventDefault()) ? returnTrue : returnFalse;
 
@@ -3093,7 +3093,7 @@ jQuery.fn.extend({
 		var args = arguments,
 			i = 1;
 
-		// link all the functions, so any of them can unbind this click handler
+		// link all the functions, so any of them can unbind this click handlers
 		while ( i < args.length ) {
 			jQuery.proxy( fn, args[ i++ ] );
 		}
@@ -3169,14 +3169,14 @@ jQuery.each(["live", "die"], function( i, name ) {
 			}
 
 			if ( name === "live" ) {
-				// bind live handler
+				// bind live handlers
 				for ( var j = 0, l = context.length; j < l; j++ ) {
 					jQuery.event.add( context[j], "live." + liveConvert( type, selector ),
 						{ data: data, selector: selector, handler: fn, origType: type, origHandler: fn, preType: preType } );
 				}
 
 			} else {
-				// unbind live handler
+				// unbind live handlers
 				context.unbind( "live." + liveConvert( type, selector ), fn );
 			}
 		}
@@ -7390,7 +7390,7 @@ if ( jQuery.support.ajax ) {
 						callback();
 					} else {
 						// Create the active xhrs callbacks list if needed
-						// and attach the unload handler
+						// and attach the unload handlers
 						if ( !xhrCallbacks ) {
 							xhrCallbacks = {};
 							xhrOnUnloadAbort();

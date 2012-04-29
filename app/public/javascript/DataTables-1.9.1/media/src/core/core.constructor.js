@@ -212,7 +212,7 @@ if ( oInit.oLanguage.sUrl !== "" )
 {
 	/* Get the language definitions from a file - because this Ajax call makes the language
 	 * get async to the remainder of this function we use bInitHandedOff to indicate that 
-	 * _fnInitialise will be fired by the returned Ajax handler, rather than the constructor
+	 * _fnInitialise will be fired by the returned Ajax handlers, rather than the constructor
 	 */
 	oSettings.oLanguage.sUrl = oInit.oLanguage.sUrl;
 	$.getJSON( oSettings.oLanguage.sUrl, null, function( json ) {

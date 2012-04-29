@@ -510,7 +510,7 @@ TableTools.prototype = {
 	
 	
 	/**
-	 * Pass text to a flash button instance, which will be used on the button's click handler
+	 * Pass text to a flash button instance, which will be used on the button's click handlers
 	 *  @method  fnSetText
 	 *  @param   {Object} clip Flash button object
 	 *  @param   {String} text Text to set
@@ -909,7 +909,7 @@ TableTools.prototype = {
 			$(nBackground).animate({"opacity": 0.25}, 500);
 		}, 10 );
 		
-		/* Event handler to remove the collection display */
+		/* Event handlers to remove the collection display */
 		$(nBackground).click( function () {
 			that._fnCollectionHide.call( that, null, null );
 		} );
@@ -998,7 +998,7 @@ TableTools.prototype = {
 				}
 			} );
 			
-			/* Add a draw callback handler for when 'select' all is active and we are using server-side
+			/* Add a draw callback handlers for when 'select' all is active and we are using server-side
 			 * processing, so TableTools will automatically select the new rows for us
 			 */
 			that.s.dt.aoDrawCallback.push( {

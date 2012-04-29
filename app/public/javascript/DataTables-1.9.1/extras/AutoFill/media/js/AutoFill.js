@@ -422,7 +422,7 @@ AutoFill.prototype = {
 	
 	
 	/**
-	 * Mouse down event handler for starting a drag
+	 * Mouse down event handlers for starting a drag
 	 *  @method  _fnFillerDragStart
 	 *  @param   {Object} e Event object
 	 *  @returns void
@@ -467,7 +467,7 @@ AutoFill.prototype = {
 			this.s.scroller.bottom = this.s.scroller.top + $(this.s.dt.nTable.parentNode).height();
 		}
 		
-		/* Scrolling handler - we set an interval (which is cancelled on mouse up) which will fire
+		/* Scrolling handlers - we set an interval (which is cancelled on mouse up) which will fire
 		 * regularly and see if we need to do any scrolling
 		 */
 		this.s.screen.interval = setInterval( function () {
@@ -508,7 +508,7 @@ AutoFill.prototype = {
 	
 	
 	/**
-	 * Mouse move event handler for during a move. See if we want to update the display based on the
+	 * Mouse move event handlers for during a move. See if we want to update the display based on the
 	 * new cursor position
 	 *  @method  _fnFillerDragMove
 	 *  @param   {Object} e Event object
@@ -558,7 +558,7 @@ AutoFill.prototype = {
 	
 	
 	/**
-	 * Mouse release handler - end the drag and take action to update the cells with the needed values
+	 * Mouse release handlers - end the drag and take action to update the cells with the needed values
 	 *  @method  _fnFillerFinish
 	 *  @param   {Object} e Event object
 	 *  @returns void

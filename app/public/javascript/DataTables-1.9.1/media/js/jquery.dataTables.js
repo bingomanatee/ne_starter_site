@@ -1409,7 +1409,7 @@
 			
 			/* 
 			 * Need to remove any old row from the display - note we can't just empty the tbody using
-			 * $().html('') since this will unbind the jQuery event handlers (even although the node 
+			 * $().html('') since this will unbind the jQuery event handlers (even although the node
 			 * still exists!) - equally we can't use innerHTML, since IE throws an exception.
 			 */
 			var
@@ -3989,9 +3989,9 @@
 		
 		
 		/**
-		 * Attach a sort handler (click) to a node
+		 * Attach a sort handlers (click) to a node
 		 *  @param {object} oSettings dataTables settings object
-		 *  @param {node} nNode node to attach the handler to
+		 *  @param {node} nNode node to attach the handlers to
 		 *  @param {int} iDataIndex column sorting index
 		 *  @param {function} [fnCallback] callback function
 		 *  @memberof DataTable#oApi
@@ -4007,7 +4007,7 @@
 				
 				/*
 				 * This is a little bit odd I admit... I declare a temporary function inside the scope of
-				 * _fnBuildHead and the click handler in order that the code presented here can be used 
+				 * _fnBuildHead and the click handlers in order that the code presented here can be used
 				 * twice - once for when bProcessing is enabled, and another time for when it is 
 				 * disabled, as we need to perform slightly different actions.
 				 *   Basically the issue here is that the Javascript engine in modern browsers don't 
@@ -4343,7 +4343,7 @@
 			$.extend( true, oSettings.aoPreSearchCols, oData.aoSearchCols );
 			
 			/* Column visibility state
-			 * Pass back visibiliy settings to the init handler, but to do not here override
+			 * Pass back visibiliy settings to the init handlers, but to do not here override
 			 * the init object that the user might have passed in
 			 */
 			oInit.saved_aoColumns = [];
@@ -6380,7 +6380,7 @@
 			{
 				/* Get the language definitions from a file - because this Ajax call makes the language
 				 * get async to the remainder of this function we use bInitHandedOff to indicate that 
-				 * _fnInitialise will be fired by the returned Ajax handler, rather than the constructor
+				 * _fnInitialise will be fired by the returned Ajax handlers, rather than the constructor
 				 */
 				oSettings.oLanguage.sUrl = oInit.oLanguage.sUrl;
 				$.getJSON( oSettings.oLanguage.sUrl, null, function( json ) {
@@ -9607,7 +9607,7 @@
 	
 		/**
 		 * You can control the default sorting direction, and even alter the behaviour
-		 * of the sort handler (i.e. only allow ascending sorting etc) using this
+		 * of the sort handlers (i.e. only allow ascending sorting etc) using this
 		 * parameter.
 		 *  @type array
 		 *  @default [ 'asc', 'desc' ]

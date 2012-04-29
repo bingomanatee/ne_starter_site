@@ -186,9 +186,9 @@ function _fnSort ( oSettings, bApplyClasses )
 
 
 /**
- * Attach a sort handler (click) to a node
+ * Attach a sort handlers (click) to a node
  *  @param {object} oSettings dataTables settings object
- *  @param {node} nNode node to attach the handler to
+ *  @param {node} nNode node to attach the handlers to
  *  @param {int} iDataIndex column sorting index
  *  @param {function} [fnCallback] callback function
  *  @memberof DataTable#oApi
@@ -204,7 +204,7 @@ function _fnSortAttachListener ( oSettings, nNode, iDataIndex, fnCallback )
 		
 		/*
 		 * This is a little bit odd I admit... I declare a temporary function inside the scope of
-		 * _fnBuildHead and the click handler in order that the code presented here can be used 
+		 * _fnBuildHead and the click handlers in order that the code presented here can be used
 		 * twice - once for when bProcessing is enabled, and another time for when it is 
 		 * disabled, as we need to perform slightly different actions.
 		 *   Basically the issue here is that the Javascript engine in modern browsers don't 

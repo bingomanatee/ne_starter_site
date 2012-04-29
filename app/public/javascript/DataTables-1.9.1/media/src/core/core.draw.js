@@ -440,7 +440,7 @@ function _fnDraw( oSettings )
 	
 	/* 
 	 * Need to remove any old row from the display - note we can't just empty the tbody using
-	 * $().html('') since this will unbind the jQuery event handlers (even although the node 
+	 * $().html('') since this will unbind the jQuery event handlers (even although the node
 	 * still exists!) - equally we can't use innerHTML, since IE throws an exception.
 	 */
 	var

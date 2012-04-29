@@ -44,7 +44,7 @@ DataTable.defaults.columns = {
 
 	/**
 	 * You can control the default sorting direction, and even alter the behaviour
-	 * of the sort handler (i.e. only allow ascending sorting etc) using this
+	 * of the sort handlers (i.e. only allow ascending sorting etc) using this
 	 * parameter.
 	 *  @type array
 	 *  @default [ 'asc', 'desc' ]

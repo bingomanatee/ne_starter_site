@@ -51,7 +51,7 @@ if (XRegExp) {
             return clone(pattern);
         }
         // Tokens become part of the regex construction process, so protect against infinite
-        // recursion when an XRegExp is constructed within a token handler or trigger
+        // recursion when an XRegExp is constructed within a token handlers or trigger
         if (isInsideConstructor)
             throw Error("can't call the XRegExp constructor within token definition functions");
 
@@ -524,9 +524,9 @@ if (XRegExp) {
     function runTokens (pattern, index, scope, context) {
         var i = tokens.length,
             result, match, t;
-        // Protect against constructing XRegExps within token handler and trigger functions
+        // Protect against constructing XRegExps within token handlers and trigger functions
         isInsideConstructor = true;
-        // Must reset `isInsideConstructor`, even if a `trigger` or `handler` throws
+        // Must reset `isInsideConstructor`, even if a `trigger` or `handlers` throws
         try {
             while (i--) { // Run in reverse order
                 t = tokens[i];
@@ -830,7 +830,7 @@ var sh = {
 		},
 		
 		/**
-		 * Event handler for a toolbar anchor.
+		 * Event handlers for a toolbar anchor.
 		 */
 		handler: function(e)
 		{
@@ -1256,7 +1256,7 @@ function popup(url, name, width, height, options)
 };
 
 /**
- * Adds event handler to the target object.
+ * Adds event handlers to the target object.
  * @param {Object} obj		Target object.
  * @param {String} type		Name of the event.
  * @param {Function} func	Handling function.
@@ -1768,7 +1768,7 @@ function stripCData(original)
 
 
 /**
- * Quick code mouse double click handler.
+ * Quick code mouse double click handlers.
  */
 function quickCodeHandler(e)
 {
@@ -1810,7 +1810,7 @@ function quickCodeHandler(e)
 	textarea.focus();
 	textarea.select();
 	
-	// set up handler for lost focus
+	// set up handlers for lost focus
 	attachEvent(textarea, 'blur', function(e)
 	{
 		textarea.parentNode.removeChild(textarea);
@@ -2684,7 +2684,7 @@ var dtLinks = [
 		}
 	} );
 	
-	/* Click handler to redirect to the documentation */
+	/* Click handlers to redirect to the documentation */
 	$('code.datatables_ref').live('click', function () {
 		var i = $.inArray( this.innerHTML.replace(/"/g,''), dtOptions );
 		if ( i !== -1 ) {

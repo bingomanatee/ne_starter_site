@@ -361,8 +361,8 @@ ZeroClipboard_TableTools.Client.prototype = {
 					// name of function
 					window[func](this, args);
 				}
-			} // foreach event handler defined
-		} // user defined handler for event
+			} // foreach event handlers defined
+		} // user defined handlers for event
 	}
 	
 };

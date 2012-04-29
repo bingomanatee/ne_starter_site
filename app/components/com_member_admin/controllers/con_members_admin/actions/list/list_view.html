@@ -1,13 +1,17 @@
 <h1>Members</h1>
 
-<table class="display"  id="members_list">
-<thead>
-<th>_id</th>
-<th>email</th>
-<th>name</th>
-<th>username</th>
-</thead>
-    <tbody><tr><td>loading data...</td></tr></tbody>
+<table class="display" id="members_list">
+    <thead>
+    <th>_id</th>
+    <th>email</th>
+    <th>name</th>
+    <th>username</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>loading data...</td>
+    </tr>
+    </tbody>
     <tfoot>
     <th>_id</th>
     <th>email</th>
@@ -15,17 +19,69 @@
     <th>username</th>
     </tfoot>
 </table>
+<style>
+    #members_list tbody tr.even:hover, #members_list tbody tr.even td.highlighted {
+        background-color: #ECFFB3;
+    }
 
+    #members_list tbody tr.odd:hover, #members_list tbody tr.odd td.highlighted {
+        background-color: #E6FF99;
+    }
+
+    #members_list tr.even:hover {
+        background-color: #ECFFB3;
+    }
+
+    #members_list tr.even:hover td.sorting_1 {
+        background-color: #DDFF75;
+    }
+
+    #members_list tr.even:hover td.sorting_2 {
+        background-color: #E7FF9E;
+    }
+
+    #members_list tr.even:hover td.sorting_3 {
+        background-color: #E2FF89;
+    }
+
+    #members_list tr.odd:hover {
+        background-color: #E6FF99;
+    }
+
+    #members_list tr.odd:hover td.sorting_1 {
+        background-color: #D6FF5C;
+    }
+
+    #members_list tr.odd:hover td.sorting_2 {
+        background-color: #E0FF84;
+    }
+
+    #members_list tr.odd:hover td.sorting_3 {
+        background-color: #DBFF70;
+    }
+</style>
 <script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-        $('#members_list').dataTable( {
-            "bProcessing": true,
-            "bServerSide": true,
-            "sAjaxSource": "/admin/members/list.json",
-            "sScrollY": "300",
-            bPaginate: true,
-            sScrollX: "100%",
-            sScrollXInner: "120%"
-        } );
-    } );
+    $(document).ready(function () {
+
+
+        var members_list = $('#members_list').dataTable({
+            "bProcessing":true,
+            "bServerSide":true,
+            "sAjaxSource":"/admin/members/list.json",
+            "sScrollY":"300",
+            bPaginate:true,
+            sScrollX:"100%",
+            sScrollXInner:"120%"
+        });
+
+
+        /* Add events */
+        $('#members_list tbody tr').live('click', function () {
+            var sTitle;
+            var nTds = $('td', this);
+            var id = $(nTds[0]).text();
+            document.location = '/admin/members/' + id;
+        });
+
+    });
 </script>

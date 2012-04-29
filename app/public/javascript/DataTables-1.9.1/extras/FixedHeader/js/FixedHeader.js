@@ -925,7 +925,7 @@ FixedHeader.prototype.VERSION = FixedHeader.VERSION;
  */
 
 /*
- * Just one 'scroll' event handler in FixedHeader, which calls the required components. This is
+ * Just one 'scroll' event handlers in FixedHeader, which calls the required components. This is
  * done as an optimisation, to reduce calculation and proagation time
  */
 jQuery(window).scroll( function () {

@@ -673,7 +673,7 @@ function KeyTable ( oInit )
 			case 27: /* esc */
 				if ( !_fnEventFire( "esc", _iOldX, _iOldY ) )
 				{
-					/* Only lose focus if there isn't an escape handler on the cell */
+					/* Only lose focus if there isn't an escape handlers on the cell */
 					_fnBlur();
 					return;
 				}
