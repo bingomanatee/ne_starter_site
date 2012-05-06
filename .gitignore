@@ -3,3 +3,5 @@
 tests/list_10.json
 junk.json
 junk.js
+node_modules/.idea/
+node_modules/.DS_Store
