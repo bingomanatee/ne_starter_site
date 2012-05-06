@@ -1,7 +1,7 @@
 var express = require('express');
 
 module.exports = {
-    init:function (server, frame, cb) {
+    start_server:function (server, frame, cb) {
         var session_config = { secret:'Alfred E Neuman' };
 
         if (frame.config.session) {

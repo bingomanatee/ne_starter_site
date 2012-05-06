@@ -1,0 +1,158 @@
+.toast-container {
+	width: 280px;
+	z-index: 9999;
+}
+
+
+* html .toast-container {
+	position: absolute;
+}
+
+.toast-item {
+	height: auto;
+	background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(top, #45484d 0%, #52555b 16%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(16%,#52555b), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #45484d 0%,#52555b 16%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #45484d 0%,#52555b 16%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #45484d 0%,#52555b 16%,#000000 100%); /* IE10+ */
+background: linear-gradient(top, #45484d 0%,#52555b 16%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    opacity: 0.9;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color: #eee;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-family: lucida Grande;
+	font-size: 14px;
+	border: 1px solid #000;
+	display: block;
+	position: relative;
+	margin: 0 0 12px 0;
+}
+
+.toast-item p {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.toast-item-close {
+    background:url(../images/cross.png) 0 0;
+    width:24px;
+    height:24px;
+    position: absolute;
+    top:-7px;
+    right:-7px;
+	cursor: pointer;
+}
+
+.toast-item-close:hover {
+    background-position: 0 -24px;
+}
+
+.toast-item-image {
+    width:32px;
+    height: 32px;
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	left: 10px;
+    margin-right: 10px;
+    float:left;
+}
+
+.toast-item-image-notice {
+    background:url(../images/notice.png);
+}
+
+.toast-item-image-success {
+    background:url(../images/success.png);
+}
+
+.toast-item-image-warning {
+    background:url(../images/warning.png);
+}
+
+.toast-item-image-error {
+    background:url(../images/error.png);
+}
+
+
+/**
+ * toast types
+ *
+ * pattern: toast-type-[value]
+ * where 'value' is the real value of the plugin option 'type'
+ *
+ */
+.toast-type-notice {
+    color: white;
+	border-color: #5292CA;
+}
+
+.toast-type-success {
+    color: white;
+	border-color: #44A900;
+}
+
+.toast-type-warning {
+    color: white;
+    border-color: #FCBD57;
+}
+
+.toast-type-error {
+    color: white;
+    border-color: #B32B2B;
+}
+
+/**
+ * positions
+ *
+ * pattern: toast-position-[value]
+ * where 'value' is the real value of the plugin option 'position'
+ *
+ */
+.toast-position-top-left {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.toast-position-top-center {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -140px;
+}
+
+.toast-position-top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.toast-position-middle-left {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    margin-top: -40px;
+}
+
+.toast-position-middle-center {
+    position: fixed;
+    left: 50%;
+    margin-left: -140px;
+    margin-top: -40px;
+    top: 50%;
+}
+
+.toast-position-middle-right {
+    position: fixed;
+    right: 20px;
+    margin-left: -140px;
+    margin-top: -40px;
+    top: 50%;
+}

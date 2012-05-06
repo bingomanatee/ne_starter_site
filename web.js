@@ -1,4 +1,5 @@
 var NE = require('nuby-express');
+var util  = require('util');
 
 module.exports = function (config, callback) {
 
@@ -27,6 +28,7 @@ module.exports = function (config, callback) {
 
             console.log('listening to port %s', port);
             frame.server().listen(port);
+           // console.log(util.inspect(frame, false, 3));
             if (callback) {
                 callback();
             }

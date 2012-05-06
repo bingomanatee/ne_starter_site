@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"> 
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		
+		<!--========= STYLES =========-->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/grid.css" />
+		<link rel="stylesheet" href="css/uniform.default.css" />
+		<link rel="stylesheet" href="css/chosen.css" />
+		<link rel="stylesheet" href="plugins/jqueryui/all/themes/base/jquery.ui.all.css" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/config.css" />
+		<!--[if gte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		
+		<!--============ JQUERY =============-->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.uniform.js" type="text/javascript"></script>
+		<script src="js/chosen.jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.placeholder.js" type="text/javascript"></script>
+		<script src="plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+		<script src="plugins/jqueryui/all/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/scriptbreaker-multiple-accordion-1.js"></script>
+		
+		<script src="js/head_scripts.js" type="text/javascript"></script>
+						
+		<!--=== ENABLE HTML5 TAGS FOR IE ===-->
+		<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+		
+		<title>Admin theme </title>
+	</head>
+
+	<body>
+		<section class="sidebar">
+			<a class="logo" href="index.html"></a>
+			<form method="get" id="searchform" action="#">
+				<input placeholder="Search..." type="text" name="s" id="s" />
+			</form>
+			<ul id="menu">
+				<li><a href="index.html">Dashboard<span class="icon1"></span></a></li>
+				<li><a href="#">Plugins<span class="icon6"></span></a>
+					<ul>	 
+						<li><a href="calendar.html">Advanced calendar</a></li>
+						<li><a href="file_explorer.html">File explorer</a></li>
+						<li><a href="charts.html">Charts</a></li>
+						<li><a href="tables.html">Data Tables</a></li>
+						<li><a href="lightbox.html">LightBox Evolution</a></li>
+						<li><a href="alerts.html">Alert messages</a></li>
+						<li><a href="dialogs.html">Fallr - Dialogs, modal boxes...</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Example forms<span class="icon2"></span></a>
+					<ul>
+						<li><a href="forms.html">Basic forms</a></li>
+						<li><a href="forms_validation.html">Forms validation</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="active">Icons<span class="icon7"></span></a>
+					<ul>
+						<li><a href="glyphish_icons.html" class="selected">Glyphish icons</a></li>
+						<li><a href="fugue_icons.html">Fugue icons</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html">Image gallery<span class="icon3"></span></a></li>
+				<li><a href="grid.html">Grid<span class="icon8"></span></a></li>
+				<li><a href="typography.html">Typography<span class="icon10"></span></a></li>
+			</ul><!--End of #menu-->
+		</section><!-- End of .sidebar -->
+		
+		<section class="container">
+			<section class="container_12">
+				<section id="page_content" class="page_content">				
+					<section class="grid_12 top_panel">
+						<div class="box">
+							<div class="block">
+								<div class="panel_elements">
+									<ul class="panel_item">
+										<li><a href="#">Private messages<span class="number">14</span></a></li>
+										<li><a href="#">System Log<span class="number">52</span></a></li>
+										<li><a href="#">Inactive entries<span class="number">6</span></a></li>
+										<li><a href="#">Comments approval<span class="number">89</span></a></li>
+										<li><a href="#">New users<span class="number">27</span></a></li>
+										<li><a href="#">Settings</a></li>
+										<li class="right"><a href="#">Logout<span class="logout"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+
+					<!-- GLYPHISH Icons start -->
+					<div class="grid_12">
+						<div class="box">
+							<h2>
+								Example of Glyphish Icons usage
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon a1</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text</span>&quot;&gt;Icon 1&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon a2</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text</span>&quot;&gt;Icon 2&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon a3</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text</span>&quot;&gt;Icon 3&lt;/span&gt;&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon a200</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text</span>&quot;&gt;Icon 200&lt;/span&gt;&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									<a href="#" class="call_button icon"><span class="m_icon a1"></span><span class="m_text">Icon 1</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a2"></span><span class="m_text">Icon 2</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a3"></span><span class="m_text">Icon 3</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a4"></span><span class="m_text">Icon 4</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a5"></span><span class="m_text">Icon 5</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a6"></span><span class="m_text">Icon 6</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a7"></span><span class="m_text">Icon 7</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a8"></span><span class="m_text">Icon 8</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a9"></span><span class="m_text">Icon 9</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a10"></span><span class="m_text">Icon 10</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a11"></span><span class="m_text">Icon 11</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a12"></span><span class="m_text">Icon 12</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a13"></span><span class="m_text">Icon 13</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a14"></span><span class="m_text">Icon 14</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a15"></span><span class="m_text">Icon 15</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a16"></span><span class="m_text">Icon 16</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a17"></span><span class="m_text">Icon 17</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a18"></span><span class="m_text">Icon 18</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a19"></span><span class="m_text">Icon 19</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a20"></span><span class="m_text">Icon 20</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a21"></span><span class="m_text">Icon 21</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a22"></span><span class="m_text">Icon 22</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a23"></span><span class="m_text">Icon 23</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a24"></span><span class="m_text">Icon 24</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a25"></span><span class="m_text">Icon 25</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a26"></span><span class="m_text">Icon 26</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a27"></span><span class="m_text">Icon 27</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a28"></span><span class="m_text">Icon 28</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a29"></span><span class="m_text">Icon 29</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a30"></span><span class="m_text">Icon 30</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a31"></span><span class="m_text">Icon 31</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a32"></span><span class="m_text">Icon 32</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a33"></span><span class="m_text">Icon 33</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a34"></span><span class="m_text">Icon 34</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a35"></span><span class="m_text">Icon 35</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a36"></span><span class="m_text">Icon 36</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a37"></span><span class="m_text">Icon 37</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a38"></span><span class="m_text">Icon 38</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a39"></span><span class="m_text">Icon 39</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a40"></span><span class="m_text">Icon 40</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a41"></span><span class="m_text">Icon 41</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a42"></span><span class="m_text">Icon 42</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a43"></span><span class="m_text">Icon 43</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a44"></span><span class="m_text">Icon 44</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a45"></span><span class="m_text">Icon 45</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a46"></span><span class="m_text">Icon 46</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a47"></span><span class="m_text">Icon 47</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a48"></span><span class="m_text">Icon 48</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a49"></span><span class="m_text">Icon 49</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a50"></span><span class="m_text">Icon 50</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a51"></span><span class="m_text">Icon 51</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a52"></span><span class="m_text">Icon 52</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a53"></span><span class="m_text">Icon 53</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a54"></span><span class="m_text">Icon 54</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a55"></span><span class="m_text">Icon 55</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a56"></span><span class="m_text">Icon 56</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a57"></span><span class="m_text">Icon 57</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a58"></span><span class="m_text">Icon 58</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a59"></span><span class="m_text">Icon 59</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a60"></span><span class="m_text">Icon 60</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a61"></span><span class="m_text">Icon 61</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a62"></span><span class="m_text">Icon 62</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a63"></span><span class="m_text">Icon 63</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a64"></span><span class="m_text">Icon 64</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a65"></span><span class="m_text">Icon 65</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a66"></span><span class="m_text">Icon 66</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a67"></span><span class="m_text">Icon 67</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a68"></span><span class="m_text">Icon 68</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a69"></span><span class="m_text">Icon 69</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a70"></span><span class="m_text">Icon 70</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a71"></span><span class="m_text">Icon 71</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a72"></span><span class="m_text">Icon 72</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a73"></span><span class="m_text">Icon 73</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a74"></span><span class="m_text">Icon 74</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a75"></span><span class="m_text">Icon 75</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a76"></span><span class="m_text">Icon 76</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a77"></span><span class="m_text">Icon 77</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a78"></span><span class="m_text">Icon 78</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a79"></span><span class="m_text">Icon 79</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a80"></span><span class="m_text">Icon 80</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a81"></span><span class="m_text">Icon 81</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a82"></span><span class="m_text">Icon 82</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a83"></span><span class="m_text">Icon 83</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a84"></span><span class="m_text">Icon 84</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a85"></span><span class="m_text">Icon 85</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a86"></span><span class="m_text">Icon 86</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a87"></span><span class="m_text">Icon 87</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a88"></span><span class="m_text">Icon 88</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a89"></span><span class="m_text">Icon 89</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a90"></span><span class="m_text">Icon 90</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a91"></span><span class="m_text">Icon 91</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a92"></span><span class="m_text">Icon 92</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a93"></span><span class="m_text">Icon 93</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a94"></span><span class="m_text">Icon 94</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a95"></span><span class="m_text">Icon 95</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a96"></span><span class="m_text">Icon 96</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a97"></span><span class="m_text">Icon 97</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a98"></span><span class="m_text">Icon 98</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a99"></span><span class="m_text">Icon 99</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a100"></span><span class="m_text">Icon 100</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a101"></span><span class="m_text">Icon 101</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a102"></span><span class="m_text">Icon 102</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a103"></span><span class="m_text">Icon 103</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a104"></span><span class="m_text">Icon 104</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a105"></span><span class="m_text">Icon 105</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a106"></span><span class="m_text">Icon 106</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a107"></span><span class="m_text">Icon 107</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a108"></span><span class="m_text">Icon 108</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a109"></span><span class="m_text">Icon 109</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a110"></span><span class="m_text">Icon 110</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a111"></span><span class="m_text">Icon 111</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a112"></span><span class="m_text">Icon 112</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a113"></span><span class="m_text">Icon 113</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a114"></span><span class="m_text">Icon 114</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a115"></span><span class="m_text">Icon 115</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a116"></span><span class="m_text">Icon 116</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a117"></span><span class="m_text">Icon 117</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a118"></span><span class="m_text">Icon 118</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a119"></span><span class="m_text">Icon 119</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a120"></span><span class="m_text">Icon 120</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a121"></span><span class="m_text">Icon 121</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a122"></span><span class="m_text">Icon 122</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a123"></span><span class="m_text">Icon 123</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a124"></span><span class="m_text">Icon 124</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a125"></span><span class="m_text">Icon 125</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a126"></span><span class="m_text">Icon 126</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a127"></span><span class="m_text">Icon 127</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a128"></span><span class="m_text">Icon 128</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a129"></span><span class="m_text">Icon 129</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a130"></span><span class="m_text">Icon 130</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a131"></span><span class="m_text">Icon 131</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a132"></span><span class="m_text">Icon 132</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a133"></span><span class="m_text">Icon 133</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a134"></span><span class="m_text">Icon 134</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a135"></span><span class="m_text">Icon 135</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a136"></span><span class="m_text">Icon 136</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a137"></span><span class="m_text">Icon 137</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a138"></span><span class="m_text">Icon 138</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a139"></span><span class="m_text">Icon 139</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a140"></span><span class="m_text">Icon 140</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a141"></span><span class="m_text">Icon 141</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a142"></span><span class="m_text">Icon 142</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a143"></span><span class="m_text">Icon 143</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a144"></span><span class="m_text">Icon 144</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a145"></span><span class="m_text">Icon 145</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a146"></span><span class="m_text">Icon 146</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a147"></span><span class="m_text">Icon 147</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a148"></span><span class="m_text">Icon 148</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a149"></span><span class="m_text">Icon 149</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a150"></span><span class="m_text">Icon 150</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a151"></span><span class="m_text">Icon 151</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a152"></span><span class="m_text">Icon 152</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a153"></span><span class="m_text">Icon 153</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a154"></span><span class="m_text">Icon 154</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a155"></span><span class="m_text">Icon 155</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a156"></span><span class="m_text">Icon 156</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a157"></span><span class="m_text">Icon 157</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a158"></span><span class="m_text">Icon 158</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a159"></span><span class="m_text">Icon 159</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a160"></span><span class="m_text">Icon 160</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a161"></span><span class="m_text">Icon 161</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a162"></span><span class="m_text">Icon 162</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a163"></span><span class="m_text">Icon 163</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a164"></span><span class="m_text">Icon 164</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a165"></span><span class="m_text">Icon 165</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a166"></span><span class="m_text">Icon 166</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a167"></span><span class="m_text">Icon 167</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a168"></span><span class="m_text">Icon 168</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a169"></span><span class="m_text">Icon 169</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a170"></span><span class="m_text">Icon 170</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a171"></span><span class="m_text">Icon 171</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a172"></span><span class="m_text">Icon 172</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a173"></span><span class="m_text">Icon 173</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a174"></span><span class="m_text">Icon 174</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a175"></span><span class="m_text">Icon 175</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a176"></span><span class="m_text">Icon 176</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a177"></span><span class="m_text">Icon 177</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a178"></span><span class="m_text">Icon 178</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a179"></span><span class="m_text">Icon 179</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a180"></span><span class="m_text">Icon 180</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a181"></span><span class="m_text">Icon 181</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a182"></span><span class="m_text">Icon 182</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a183"></span><span class="m_text">Icon 183</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a184"></span><span class="m_text">Icon 184</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a185"></span><span class="m_text">Icon 185</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a186"></span><span class="m_text">Icon 186</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a187"></span><span class="m_text">Icon 187</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a188"></span><span class="m_text">Icon 188</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a189"></span><span class="m_text">Icon 189</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a190"></span><span class="m_text">Icon 190</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a191"></span><span class="m_text">Icon 191</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a192"></span><span class="m_text">Icon 192</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a193"></span><span class="m_text">Icon 193</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a194"></span><span class="m_text">Icon 194</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a195"></span><span class="m_text">Icon 195</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a196"></span><span class="m_text">Icon 196</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a197"></span><span class="m_text">Icon 197</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a198"></span><span class="m_text">Icon 198</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a199"></span><span class="m_text">Icon 199</span></a>
+									<a href="#" class="call_button icon"><span class="m_icon a200"></span><span class="m_text">Icon 200</span></a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- GLYPHISH Icons end -->
+					<div class="clear"></div>
+					
+					<!-- GLYPHISH Icons start -->
+					<div class="grid_12">
+						<div class="box">
+							<h2>
+								Example of Glyphish Icons usage style 2
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon2 a1</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon2 a2</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon2 a3</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon2 a200</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a1"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a2"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a3"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a4"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a5"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a6"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a7"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a8"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a9"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a10"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a11"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a12"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a13"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a14"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a15"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a16"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a17"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a18"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a19"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a20"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a21"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a22"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a23"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a24"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a25"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a26"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a27"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a28"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a29"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a30"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a31"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a32"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a33"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a34"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a35"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a36"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a37"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a38"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a39"></span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon2 a40"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- GLYPHISH Icons end -->
+					<div class="clear"></div>
+					
+					
+					<!-- GLYPHISH Icons start -->
+					<div class="grid_12">
+						<div class="box">
+							<h2>
+								Example of Glyphish Icons usage style 3
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon3 a1</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text3</span>&quot;&gt;Button 01&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon3 a2</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text3</span>&quot;&gt;Button 02&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon3 a3</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text3</span>&quot;&gt;Button 03&lt;/span&gt;&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">call_button2 icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">m_icon3 a200</span>&quot;&gt;&lt;/span&gt;&lt;span class=&quot;<span class="text-indianred">m_text3</span>&quot;&gt;Button 200&lt;/span&gt;&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a1"></span><span class="m_text3">Button 01</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a2"></span><span class="m_text3">Button 02</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a3"></span><span class="m_text3">Button 03</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a4"></span><span class="m_text3">Button 04</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a5"></span><span class="m_text3">Button 05</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a6"></span><span class="m_text3">Button 06</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a7"></span><span class="m_text3">Button 07</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a8"></span><span class="m_text3">Button 08</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a9"></span><span class="m_text3">Button 09</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a10"></span><span class="m_text3">Button 10</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a11"></span><span class="m_text3">Button 11</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a12"></span><span class="m_text3">Button 12</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a13"></span><span class="m_text3">Button 13</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a14"></span><span class="m_text3">Button 14</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a15"></span><span class="m_text3">Button 15</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a16"></span><span class="m_text3">Button 16</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a17"></span><span class="m_text3">Button 17</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a18"></span><span class="m_text3">Button 18</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a19"></span><span class="m_text3">Button 19</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a20"></span><span class="m_text3">Button 20</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a21"></span><span class="m_text3">Button 21</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a22"></span><span class="m_text3">Button 22</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a23"></span><span class="m_text3">Button 23</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a24"></span><span class="m_text3">Button 24</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a25"></span><span class="m_text3">Button 25</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a26"></span><span class="m_text3">Button 26</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a27"></span><span class="m_text3">Button 27</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a28"></span><span class="m_text3">Button 28</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a29"></span><span class="m_text3">Button 29</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a30"></span><span class="m_text3">Button 30</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a31"></span><span class="m_text3">Button 31</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a32"></span><span class="m_text3">Button 32</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a33"></span><span class="m_text3">Button 33</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a34"></span><span class="m_text3">Button 34</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a35"></span><span class="m_text3">Button 35</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a36"></span><span class="m_text3">Button 36</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a37"></span><span class="m_text3">Button 37</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a38"></span><span class="m_text3">Button 38</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a39"></span><span class="m_text3">Button 39</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a40"></span><span class="m_text3">Button 40</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a41"></span><span class="m_text3">Button 41</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a42"></span><span class="m_text3">Button 42</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a43"></span><span class="m_text3">Button 43</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a44"></span><span class="m_text3">Button 44</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a45"></span><span class="m_text3">Button 45</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a46"></span><span class="m_text3">Button 46</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a47"></span><span class="m_text3">Button 47</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a48"></span><span class="m_text3">Button 48</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a49"></span><span class="m_text3">Button 49</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a50"></span><span class="m_text3">Button 50</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a51"></span><span class="m_text3">Button 51</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a52"></span><span class="m_text3">Button 52</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a53"></span><span class="m_text3">Button 53</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a54"></span><span class="m_text3">Button 54</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a55"></span><span class="m_text3">Button 55</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a56"></span><span class="m_text3">Button 56</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a57"></span><span class="m_text3">Button 57</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a58"></span><span class="m_text3">Button 58</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a59"></span><span class="m_text3">Button 59</span></a>
+									<a href="#" class="call_button2 icon"><span class="m_icon3 a60"></span><span class="m_text3">Button 60</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- GLYPHISH Icons end -->
+					<div class="clear"></div>
+					
+				</section><!-- end of #page_content -->
+			</section><!-- end of #container_12 -->
+		</section><!-- end of #container -->
+		
+	<script src="js/ui_calls.js" type="text/javascript"></script>
+	<script src="js/scripts.js" type="text/javascript"></script>
+	</body>
+
+</html>

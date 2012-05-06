@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"> 
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		
+		<!--========= STYLES =========-->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/grid.css" />
+		<link rel="stylesheet" href="css/uniform.default.css" />
+		<link rel="stylesheet" href="css/chosen.css" />
+		<link rel="stylesheet" href="plugins/jqueryui/all/themes/base/jquery.ui.all.css" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/config.css" />
+		<!--[if gte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		
+		<!--============ JQUERY =============-->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.uniform.js" type="text/javascript"></script>
+		<script src="js/chosen.jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.placeholder.js" type="text/javascript"></script>
+		<script src="plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+		<script src="plugins/jqueryui/all/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/scriptbreaker-multiple-accordion-1.js"></script>
+		
+		<script src="js/head_scripts.js" type="text/javascript"></script>
+						
+		<!--=== ENABLE HTML5 TAGS FOR IE ===-->
+		<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+		
+		<title>Admin theme </title>
+	</head>
+
+	<body>
+		<section class="sidebar">
+			<a class="logo" href="index.html"></a>
+			<form method="get" id="searchform" action="#">
+				<input placeholder="Search..." type="text" name="s" id="s" />
+			</form>
+			<ul id="menu">
+				<li><a href="index.html">Dashboard<span class="icon1"></span></a></li>
+				<li><a href="#">Plugins<span class="icon6"></span></a>
+					<ul>	 
+						<li><a href="calendar.html">Advanced calendar</a></li>
+						<li><a href="file_explorer.html">File explorer</a></li>
+						<li><a href="charts.html">Charts</a></li>
+						<li><a href="tables.html">Data Tables</a></li>
+						<li><a href="lightbox.html">LightBox Evolution</a></li>
+						<li><a href="alerts.html">Alert messages</a></li>
+						<li><a href="dialogs.html">Fallr - Dialogs, modal boxes...</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Example forms<span class="icon2"></span></a>
+					<ul>
+						<li><a href="forms.html">Basic forms</a></li>
+						<li><a href="forms_validation.html">Forms validation</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Icons<span class="icon7"></span></a>
+					<ul>
+						<li><a href="glyphish_icons.html">Glyphish icons</a></li>
+						<li><a href="fugue_icons.html">Fugue icons</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html">Image gallery<span class="icon3"></span></a></li>
+				<li><a href="grid.html">Grid<span class="icon8"></span></a></li>
+				<li><a href="typography.html" class="active">Typography<span class="icon10"></span></a></li>
+			</ul><!--End of #menu-->
+		</section><!-- End of .sidebar -->
+		
+		<section class="container">
+			<section class="container_12">
+				<section id="page_content" class="page_content">				
+					<section class="grid_12 top_panel">
+						<div class="box">
+							<div class="block">
+								<div class="panel_elements">
+									<ul class="panel_item">
+										<li><a href="#">Private messages<span class="number">14</span></a></li>
+										<li><a href="#">System Log<span class="number">52</span></a></li>
+										<li><a href="#">Inactive entries<span class="number">6</span></a></li>
+										<li><a href="#">Comments approval<span class="number">89</span></a></li>
+										<li><a href="#">New users<span class="number">27</span></a></li>
+										<li><a href="#">Settings</a></li>
+										<li class="right"><a href="#">Logout<span class="logout"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+					
+					<div class="grid_6">
+						<div class="box">
+							<h2>
+								Headings
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<h1>This is a Heading 1 Element</h1>
+									<p>Nam convallis imperdiet pretium. Integer commodo malesuada  purus, a hendrerit erat aliquet in. Nunc eget odio augue, non fringilla  lacus.</p>
+									
+									<h2>This is a Heading 2 Element</h2>
+									<p>Nam convallis imperdiet pretium. Integer commodo malesuada  purus, a hendrerit erat aliquet in. Nunc eget odio augue, non fringilla  lacus.</p>
+									
+									<h3>This is a Heading 3 Element</h3>
+									<p>Nam convallis imperdiet pretium. Integer commodo malesuada  purus, a hendrerit erat aliquet in. Nunc eget odio augue, non fringilla  lacus.</p>
+									
+									<h4>This is a Heading 4 Element</h4>
+									<p>Nam convallis imperdiet pretium. Integer commodo malesuada  purus, a hendrerit erat aliquet in. Nunc eget odio augue, non fringilla  lacus.</p>
+									
+									<h5>This is a Heading 5 Element</h5>
+									<p>Nam convallis imperdiet pretium. Integer commodo malesuada  purus, a hendrerit erat aliquet in. Nunc eget odio augue, non fringilla  lacus.</p>
+									
+									<h6>This is a Heading 6 Element</h6>
+									<p>Nam convallis imperdiet pretium. Integer commodo malesuada  purus, a hendrerit erat aliquet in. Nunc eget odio augue, non fringilla  lacus.</p>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</div><!-- End of .grid_6 -->
+					
+					
+					<div class="grid_6">
+						<div class="box">
+							<h2>
+								Alerts
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<div class="alert info_msg"><strong>Info: </strong>This is an informative message.</div>
+									<div class="alert error_msg"><strong>Error: </strong>Uhh, here is a critical error in <strong>functions.php</strong> on line 274.</div>
+									<div class="alert note_msg"><strong>Note: </strong>Please verify data again before submit.</div>
+									<div class="alert tip_msg"><strong>Tip: </strong>Every time you make a change to this file, first create a backup.</div>
+									<div class="alert succes_msg"><strong>Succes: </strong>Your message was added successfully and is awaiting for approval.</div>
+									<div class="alert saved_msg"><strong>Saved: </strong>Your personal settings were saved..</div>	
+									<div class="alert exclamation_msg"><strong>Exclamation: </strong>Attention, editing of this file may harm the server.</div>
+									<div class="alert battery_msg"><strong>Battery: </strong>You have only 175Mb free space. Please upgrade to another package.</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					
+					<div class="grid_12">
+						<div class="box">
+							<h2>
+								CSS3 Buttons
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<!-- White -->
+									<a href="#" class="button small">Button</a>
+									<a href="#" class="button">Button</a>
+									<a href="#" class="button medium">Button</a>
+									<a href="#" class="button large">Button</a>
+									<!-- Blue -->
+									<a href="#" class="button blue small">Button</a>
+									<a href="#" class="button blue">Button</a>
+									<a href="#" class="button medium blue">Button</a>
+									<a href="#" class="button blue large">Button</a>
+									<!-- Green -->
+									<a href="#" class="button green small">Button</a>
+									<a href="#" class="button green">Button</a>
+									<a href="#" class="button medium green">Button</a>
+									<a href="#" class="button green large">Button</a>
+									<div class="clear"></div>
+									<!-- Orange -->
+									<a href="#" class="button orange small">Button</a>
+									<a href="#" class="button orange">Button</a>
+									<a href="#" class="button medium orange">Button</a>
+									<a href="#" class="button orange large">Button</a>
+									<!-- Red -->
+									<a href="#" class="button red small">Button</a>
+									<a href="#" class="button red">Button</a>
+									<a href="#" class="button medium red">Button</a>
+									<a href="#" class="button red large">Button</a>
+									<!-- Gray -->
+									<a href="#" class="button gray small">Button</a>
+									<a href="#" class="button gray">Button</a>
+									<a href="#" class="button medium gray">Button</a>
+									<a href="#" class="button gray large">Button</a>
+									<div class="clear"></div>
+									<!-- Black -->
+									<a href="#" class="button black small">Button</a>
+									<a href="#" class="button black">Button</a>
+									<a href="#" class="button medium black">Button</a>
+									<a href="#" class="button black large">Button</a>
+									<!-- LightBlue -->
+									<a href="#" class="button lightblue small">Button</a>
+									<a href="#" class="button lightblue">Button</a>
+									<a href="#" class="button medium lightblue">Button</a>
+									<a href="#" class="button lightblue large">Button</a>
+									<!-- SlateGray -->
+									<a href="#" class="button slategray small">Button</a>
+									<a href="#" class="button slategray">Button</a>
+									<a href="#" class="button medium slategray">Button</a>
+									<a href="#" class="button slategray large">Button</a>
+								</div>
+							</div>
+						</div>
+					</div><!-- End of .grid_12 -->
+					<div class="clear"></div>
+					
+					<div class="grid_6">
+						<div class="box">
+							<h2>
+								Tabs
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<div class="tabs">
+										<ul>
+											<li><a href="#tabs-1">Nunc tincidunt</a></li>
+											<li><a href="#tabs-2">Proin dolor</a></li>
+											<li><a href="#tabs-3">Aenean lacinia</a></li>
+										</ul>
+										<div id="tabs-1">
+											<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p>
+										</div>
+										<div id="tabs-2">
+											<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+										</div>
+										<div id="tabs-3">
+											<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="grid_6">
+						<div class="box">
+							<h2>
+								Accordion
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in ">
+									<div class="accordion">
+										<h3><a href="#">Section 1</a></h3>
+										<div>
+											<p>
+											Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+											ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+											amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+											odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+											</p>
+										</div>
+										<h3><a href="#">Section 2</a></h3>
+										<div>
+											<p>
+											Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+											purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+											velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+											suscipit faucibus urna.
+											</p>
+										</div>
+										<h3><a href="#">Section 3</a></h3>
+										<div>
+											<p>
+											Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+											Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+											ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+											lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+											</p>
+											<ul>
+												<li>List item one</li>
+												<li>List item two</li>
+												<li>List item three</li>
+											</ul>
+										</div>
+										<h3><a href="#">Section 4</a></h3>
+										<div>
+											<p>
+											Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+											et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+											faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+											mauris vel est.
+											</p>
+											<p>
+											Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+											Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+											inceptos himenaeos.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--End grid_6-->
+					<div class="clear"></div>
+					
+					<div class="grid_12">
+						<div class="box">
+							<h2>
+								Lists
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<div class="grid_3"> 
+										<h4>List style 1</h4> 
+										<ul class="list1"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>         
+										</ul> 
+									</div>
+									<div class="grid_3"> 
+										<h4>List style 2</h4> 
+										<ul class="list2"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>          
+										</ul>                   
+									</div>
+									<div class="grid_3"> 
+										<h4>List style 3</h4> 
+										<ul class="list3"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul>
+									</div> 
+									<div class="grid_3"> 
+										<h4>List style 4</h4> 
+										<ul class="list4"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul>                   
+									</div>
+									<div class="clear"></div>
+									
+									<div class="grid_3"> 
+										<h4>List style 5</h4> 
+										<ul class="list5"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>            
+										</ul> 
+									</div>
+									<div class="grid_3"> 
+										<h4>List style 6</h4> 
+										<ul class="list6"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul>                   
+									</div>
+									<div class="grid_3"> 
+										<h4>List style 7</h4> 
+										<ul class="list7"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul>
+									</div> 
+									<div class="grid_3"> 
+										<h4>List style 8</h4> 
+										<ul class="list8"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul>                   
+									</div>
+									<div class="clear"></div>
+									
+									<div class="grid_3"> 
+										<h4>List style 9</h4> 
+										<ul class="list9"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul> 
+									</div>
+									<div class="grid_3"> 
+										<h4>List style 10</h4> 
+										<ul class="list10"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>            
+										</ul>                   
+									</div>
+									<div class="grid_3"> 
+										<h4>List style 11</h4> 
+										<ul class="list11"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul>
+									</div> 
+									<div class="grid_3"> 
+										<h4>List style 12</h4> 
+										<ul class="list12"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul>                   
+									</div>
+									<div class="clear"></div>
+									
+									<div class="grid_3"> 
+										<h4>List style 13</h4> 
+										<ul class="list13"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ul> 
+									</div>
+									<div class="grid_3"> 
+										<h4>List style 14</h4> 
+										<ul class="list14"> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>            
+										</ul>                   
+									</div>
+									<div class="grid_3"> 
+										<h4>Unordered list</h4> 
+										<ul> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>            
+										</ul>                   
+									</div>
+									<div class="grid_3"> 
+										<h4>Ordered list</h4> 
+										<ol> 
+											<li>Lorem ipsum dolor sit amet</li> 
+											<li>Donec convallis molestie</li> 
+											<li>Lorem ipsum dolor sit amet</li>           
+										</ol>                   
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- End of .grid_12 -->
+					<div class="clear"></div>
+					
+					<div class="grid_12">
+						<div class="box">
+							<h2>
+								Highlights
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">				
+									<div class="grid_3"> 
+										 <p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style1">Highlight1</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+									</div> 
+										 
+								   <div class="grid_3">   
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style2">Highlight2</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									  
+								   <div class="grid_3"> 
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style3">Highlight3</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									   
+								   <div class="grid_3"> 
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style4">Highlight4</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									<div class="clear"></div>
+									
+									
+									<div class="grid_3"> 
+										 <p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style5">Highlight5</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+									</div> 
+										 
+								   <div class="grid_3">   
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style6">Highlight6</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									  
+								   <div class="grid_3"> 
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style7">Highlight7</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									   
+								   <div class="grid_3"> 
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style8">Highlight8</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									<div class="clear"></div>
+									
+									
+									<div class="grid_3"> 
+										 <p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style9">Highlight9</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+									</div> 
+										 
+								   <div class="grid_3">   
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style10">Highlight10</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									  
+								   <div class="grid_3"> 
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style11">Highlight11</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									   
+								   <div class="grid_3"> 
+										<p> Class aptent taciti sociosqu ad litora torquent per conubia nostra. <mark class="style12">Highlight12</mark> Nulla at nulla sed eros tincidunt semper non ut neque. Sed metus elit, iaculis eget varius eget.</p>
+								   </div> 
+									<div class="clear"></div>
+									
+									</div>
+								</div>
+							</div>
+						</div><!-- End of .grid_12 -->
+					<div class="clear"></div>
+				</section><!-- end of #page_content -->
+			</section><!-- end of #container_12 -->
+		</section><!-- end of #container -->
+		
+	<script src="js/ui_calls.js" type="text/javascript"></script>
+	<script src="js/scripts.js" type="text/javascript"></script>
+	</body>
+
+</html>

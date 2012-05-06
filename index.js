@@ -1,1 +1,1 @@
-require('./web')(3001)
+require('./web')()

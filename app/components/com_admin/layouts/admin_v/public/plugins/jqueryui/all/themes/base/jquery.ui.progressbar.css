@@ -1,0 +1,16 @@
+/*
+ * jQuery UI Progressbar 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.ui-progressbar { height:1.2em; text-align: left; margin-bottom: 20px !important; margin-top: 6px !important; }
+.ui-progressbar .ui-progressbar-value { margin: -1px; height:100%; }
+
+#progressbar .ui-progressbar-value { background-image: url(images/pbar-ani.gif);}
+#progressbar2 .ui-progressbar-value { background-image: url(images/pb_bg.png); background-repeat: repeat;}
+#progressbar3 .ui-progressbar-value { background-image: url(images/pb_bg1.png); background-repeat: repeat;}
+#progressbar4 .ui-progressbar-value { background-image: url(images/pb_bg2.png); background-repeat: repeat;}

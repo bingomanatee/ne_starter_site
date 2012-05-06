@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"> 
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
+		
+		<!--========= STYLES =========-->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/grid.css" />
+		<link rel="stylesheet" href="css/uniform.default.css" />
+		<link rel="stylesheet" href="css/chosen.css" />
+		<link rel="stylesheet" href="plugins/jqueryui/all/themes/base/jquery.ui.all.css" />
+		
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/config.css" />
+		<!--[if gte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		
+		<!--============ JQUERY =============-->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.uniform.js" type="text/javascript"></script>
+		<script src="js/chosen.jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.placeholder.js" type="text/javascript"></script>
+		<script src="plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+		<script src="plugins/jqueryui/all/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/scriptbreaker-multiple-accordion-1.js"></script>
+		
+		<script src="js/head_scripts.js" type="text/javascript"></script>
+						
+		<!--=== ENABLE HTML5 TAGS FOR IE ===-->
+		<!--[if IE]><script src="js/html5.js"></script><![endif]-->
+		
+		<title>Admin theme </title>
+	</head>
+
+	<body>
+		<section class="sidebar">
+			<a class="logo" href="index.html"></a>
+			<form method="get" id="searchform" action="#">
+				<input placeholder="Search..." type="text" name="s" id="s" />
+			</form>
+			<ul id="menu">
+				<li><a href="index.html">Dashboard<span class="icon1"></span></a></li>
+				<li><a href="#">Plugins<span class="icon6"></span></a>
+					<ul>	 
+						<li><a href="calendar.html">Advanced calendar</a></li>
+						<li><a href="file_explorer.html">File explorer</a></li>
+						<li><a href="charts.html">Charts</a></li>
+						<li><a href="tables.html">Data Tables</a></li>
+						<li><a href="lightbox.html">LightBox Evolution</a></li>
+						<li><a href="alerts.html">Alert messages</a></li>
+						<li><a href="dialogs.html">Fallr - Dialogs, modal boxes...</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Example forms<span class="icon2"></span></a>
+					<ul>
+						<li><a href="forms.html">Basic forms</a></li>
+						<li><a href="forms_validation.html">Forms validation</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="active">Icons<span class="icon7"></span></a>
+					<ul>
+						<li><a href="glyphish_icons.html">Glyphish icons</a></li>
+						<li><a href="fugue_icons.html" class="selected">Fugue icons</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html">Image gallery<span class="icon3"></span></a></li>
+				<li><a href="grid.html">Grid<span class="icon8"></span></a></li>
+				<li><a href="typography.html">Typography<span class="icon10"></span></a></li>
+			</ul><!--End of #menu-->
+		</section><!-- End of .sidebar -->
+		
+		<section class="container">
+			<section class="container_12">
+				<section id="page_content" class="page_content">				
+					<section class="grid_12 top_panel">
+						<div class="box">
+							<div class="block">
+								<div class="panel_elements">
+									<ul class="panel_item">
+										<li><a href="#">Private messages<span class="number">14</span></a></li>
+										<li><a href="#">System Log<span class="number">52</span></a></li>
+										<li><a href="#">Inactive entries<span class="number">6</span></a></li>
+										<li><a href="#">Comments approval<span class="number">89</span></a></li>
+										<li><a href="#">New users<span class="number">27</span></a></li>
+										<li><a href="#">Settings</a></li>
+										<li class="right"><a href="#">Logout<span class="logout"></span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- FUGUE example use start -->
+					<div class="grid_12">
+						<div class="box">
+							<h2>
+								Example of Fugue Icons usage
+								<span class="l"></span><span class="r"></span>
+							</h2>
+							<div class="hide"><span class="s">Show</span><span class="h">Hide</span></div>
+							<div class="block">
+								<div class="block_in">
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon b1</span>&quot;&gt;&lt;/span&gt;Button&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon b2</span>&quot;&gt;&lt;/span&gt;Button&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon b3</span>&quot;&gt;&lt;/span&gt;Button&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon b225</span>&quot;&gt;&lt;/span&gt;Button&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									<a href="#" class="button white icon"><span class="b_icon b1"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b2"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b3"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b4"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b5"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b6"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b7"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b8"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b9"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b10"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b11"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b12"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b13"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b14"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b15"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b16"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b17"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b18"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b19"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b20"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b21"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b22"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b23"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b24"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b25"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b26"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b27"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b28"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b29"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b30"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b31"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b32"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b33"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b34"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b35"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b36"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b37"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b38"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b39"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b40"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b41"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b42"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b43"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b44"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b45"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b46"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b47"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b48"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b49"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b50"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b61"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b62"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b63"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b64"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b65"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b66"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b67"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b68"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b69"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b70"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b71"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b72"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b73"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b74"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b75"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b76"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b77"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b78"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b79"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b80"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b81"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b82"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b83"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b84"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b85"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b86"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b87"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b88"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b89"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b90"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b91"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b92"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b93"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b94"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b95"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b96"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b97"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b98"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b99"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b100"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b101"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b102"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b103"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b104"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b105"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b106"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b107"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b108"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b109"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b110"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b111"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b112"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b113"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b114"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b115"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b116"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b117"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b118"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b119"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b120"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b121"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b122"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b123"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b124"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b125"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b126"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b127"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b128"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b129"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b130"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b131"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b132"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b133"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b134"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b135"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b136"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b137"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b138"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b139"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b140"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b141"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b142"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b143"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b144"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b145"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b146"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b147"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b148"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b149"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b150"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b151"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b152"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b153"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b154"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b155"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b156"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b157"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b158"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b159"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b160"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b161"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b162"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b163"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b164"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b165"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b166"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b167"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b168"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b169"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b170"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b171"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b172"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b173"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b174"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b175"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b176"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b177"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b178"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b179"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b180"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b181"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b182"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b183"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b184"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b185"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b186"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b187"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b188"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b189"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b190"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b191"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b192"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b193"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b194"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b195"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b196"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b197"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b198"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b199"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b200"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b201"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b202"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b203"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b204"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b205"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b206"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b207"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b208"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b209"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b210"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b211"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b212"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b213"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b214"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b215"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b216"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b217"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b218"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b219"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b220"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b221"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b222"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b223"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b224"></span>Button</a>
+									<a href="#" class="button white icon"><span class="b_icon b225"></span>Button</a>
+									
+									<br /><br /><hr />
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b1</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b2</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b3</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button white icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b225</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									
+									<a href="#" class="button white icon"><span class="b_icon2 b1"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b2"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b3"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b4"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b5"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b6"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b7"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b8"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b9"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b10"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b11"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b12"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b13"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b14"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b15"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b16"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b17"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b18"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b19"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b20"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b21"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b22"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b23"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b24"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b25"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b26"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b27"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b28"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b29"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b30"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b31"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b32"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b33"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b34"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b35"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b36"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b37"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b38"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b39"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b40"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b41"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b42"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b43"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b44"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b45"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b46"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b47"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b48"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b49"></span></a>
+									<a href="#" class="button white icon"><span class="b_icon2 b50"></span></a>
+									
+									<br /><br /><hr />
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button green icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b1</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button green icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b2</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button green icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b3</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button green icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b225</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									<a href="#" class="button green icon"><span class="b_icon2 b1"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b2"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b3"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b4"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b5"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b6"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b7"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b8"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b9"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b10"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b11"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b12"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b13"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b14"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b15"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b16"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b17"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b18"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b19"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b20"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b21"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b22"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b23"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b24"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b25"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b26"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b27"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b28"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b29"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b30"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b31"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b32"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b33"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b34"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b35"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b36"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b37"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b38"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b39"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b40"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b41"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b42"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b43"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b44"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b45"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b46"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b47"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b48"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b49"></span></a>
+									<a href="#" class="button green icon"><span class="b_icon2 b50"></span></a>
+									
+									
+									<br /><br /><hr />
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button lightblue icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b1</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button lightblue icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b2</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button lightblue icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b3</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button lightblue icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b225</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b1"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b2"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b3"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b4"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b5"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b6"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b7"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b8"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b9"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b10"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b11"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b12"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b13"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b14"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b15"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b16"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b17"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b18"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b19"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b20"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b21"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b22"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b23"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b24"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b25"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b26"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b27"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b28"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b29"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b30"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b31"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b32"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b33"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b34"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b35"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b36"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b37"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b38"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b39"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b40"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b41"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b42"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b43"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b44"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b45"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b46"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b47"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b48"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b49"></span></a>
+									<a href="#" class="button lightblue icon"><span class="b_icon2 b50"></span></a>
+									
+									<br /><br /><hr />
+									<!-- Code explanation -->
+									<strong>Structure:</strong>
+									<code>
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button orange icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b1</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button orange icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b2</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button orange icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b3</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;<br />
+									.. ...<br />
+									&lt;a href=&quot;#&quot; class=&quot;<span class="text-green">button orange icon</span>&quot;&gt;&lt;span class=&quot;<span class="text-indianred">b_icon2 b225</span>&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+									</code>
+									<div class="clear"></div>
+									<!-- Code explanation end -->
+									
+									<a href="#" class="button orange icon"><span class="b_icon2 b1"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b2"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b3"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b4"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b5"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b6"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b7"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b8"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b9"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b10"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b11"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b12"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b13"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b14"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b15"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b16"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b17"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b18"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b19"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b20"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b21"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b22"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b23"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b24"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b25"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b26"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b27"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b28"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b29"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b30"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b31"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b32"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b33"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b34"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b35"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b36"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b37"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b38"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b39"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b40"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b41"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b42"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b43"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b44"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b45"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b46"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b47"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b48"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b49"></span></a>
+									<a href="#" class="button orange icon"><span class="b_icon2 b50"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- FUGUE Icons example use end -->
+					<div class="clear"></div>
+				</section><!-- end of #page_content -->
+			</section><!-- end of #container_12 -->
+		</section><!-- end of #container -->
+		
+	<script src="js/ui_calls.js" type="text/javascript"></script>
+	<script src="js/scripts.js" type="text/javascript"></script>
+	</body>
+
+</html>
