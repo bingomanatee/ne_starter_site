@@ -762,6 +762,18 @@ width:24px;
 display:block;
 }
 
+#menu li a span.member {
+    background:url(../images/PNG/user_i.png) 0 0 no-repeat;
+    background-size:16px 16px;
+}
+#menu li a span.members {
+    background:url(../images/PNG/users_i.png) 0 0 no-repeat;
+    background-size:16px 16px;
+}
+#menu li a span.priv {
+    background:url(../images/PNG/lock.png) 0 0 no-repeat;
+    background-size:16px 16px;
+}
 #menu li a span.icon1 {
 background:url(../images/fugue/icons24/megaphone.png) 0 0 no-repeat;
 }

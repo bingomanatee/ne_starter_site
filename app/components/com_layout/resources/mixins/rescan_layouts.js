@@ -86,15 +86,6 @@ module.exports = {
 
         gate.task_start();
         frame.reload([layout_dir_handler], _after_load, frame);
-        /*   var loader = new NE.Loader({path: frame.path});
-         loader.add_handler(layout_dir_handler);
-         gate.task_start();
-         loader.start_load(function(){
-         //   console.log('ldh: loader %s', util.inspect(loader));
-         frame.add_resources(loader.get_resources('layout'));
-         gate.task_done();
-         }, frame.path);
-         */
         gate.start(); //   console.log('scanning %s', frame.path);
     }
 }
