@@ -35,6 +35,9 @@ module.exports = {
 
     init:function (rs, input, cb) {
         input.menu = _grouped_menus;
+        if (!input.active_menu){
+            input.active_menu = false;
+        }
     },
 
     add_menus: function(full_path, cb){
