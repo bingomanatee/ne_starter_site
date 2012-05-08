@@ -48,7 +48,6 @@ module.exports = {
                 data[key] = (value == 'true') ? true : false;
             }
         });
-        console.log('data query: %s', util.inspect(data));
 
         var schema = [];
         var search = {value:data.sSearch, regex:data.bRegex}

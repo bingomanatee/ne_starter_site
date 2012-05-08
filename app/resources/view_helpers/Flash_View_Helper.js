@@ -1,16 +1,17 @@
 var NE = require('nuby-express');
 var _ = require('underscore');
 var util = require('util');
+var _s = require('underscore.string');
 
 var each_msg = '<% md.messages.forEach(function(msg){ %>' +
     '<li><%= msg %></li>' +
     '<% }) %>';
 var foreach = '<% messages.forEach(function(md) { %>' +
-    '<h3><%= md.type %></h3>' +
+    '<div class="alert <%= md.type %>_msg"><strong><%=  md.type %>:</strong>' +
     '<ul>' + each_msg + '</ul>' +
     '</div><% }) %>';
 var content = '<% if (count > 0) { %>' +
-    '<div class="flash_messages"><h2>Messages:</h2>' +
+    '<div class="flash_messages">' +
     foreach +
     '<% } else { %><!-- no messages --><% } %>';
 var _template = _.template(content);

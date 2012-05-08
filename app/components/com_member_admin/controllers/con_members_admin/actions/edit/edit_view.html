@@ -1,0 +1,90 @@
+<div class="box">
+
+    <h2>Member Detail
+        <span class="l"></span>
+        <span class="r"></span>
+    </h2>
+
+    <div class="block">
+        <form action="/admin/member/<%= member._id %>/edit" class="form_place" method="POST">
+            <section class="form_row">
+                <div class="grid_3">
+                    <label>_id</label>
+                </div>
+                <div class="grid_9">
+                    <div class="block_content">
+                        <input type="text" class="i-format" readonly="readonly" id="member_form__id"
+                               name="member[_id]" value="<%= member._id %>">
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section class="form_row">
+                <div class="grid_3">
+                    <label>name</label>
+                </div>
+                <div class="grid_9">
+                    <div class="block_content">
+                        <input type="text" class="i-format" id="member_form_name"
+                               name="member[name]" value="<%= member.name %>"/>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+            <section class="form_row">
+                <div class="grid_3">
+                    <label>username</label>
+                </div>
+                <div class="grid_9">
+                    <div class="block_content">
+                        <input type="text" class="i-format" id="member_form_username"
+                               name="member[username]" value="<%= member.username %>">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section class="form_row">
+                <div class="grid_3">
+                    <label>email</label>
+                </div>
+                <div class="grid_9">
+                    <div class="block_content">
+                        <input type="text" class="i-format" id="member_form_email"
+                               name="member[email]" value="<%= member.email %>">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section class="form_row button_row textcenter">
+                <div class="grid_6">
+                    <div class="block_content">
+                        <button id="member_form_edit" type="submit" class="button medium green">Save</button>
+                    </div>
+                </div>
+                <div class="grid_6">
+                    <div class="block_content">
+                        <button id="member_form_delete"
+                                onClick="document.location='/admin/member/<%= member._id %>'" class="button medium">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+        </form>
+    </div>
+</div>
+<% if (save_err){ %>
+
+<script language="javascript">
+    var errs = <%- JSON.stringify(save_err) %>;
+
+    for (var prop in errs.errors){
+        var prop_err = errs.errors[prop];
+        $('#member_form_' + prop).after('<p>' + prop_err.message + '</p>');
+    }
+
+</script>
+
+        <% } %>

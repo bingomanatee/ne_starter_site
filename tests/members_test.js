@@ -81,13 +81,38 @@ var framework;
 module.exports = {
 
     setup:function (test) {
-        new_member = {name: "Bob", username:'foo', email:'foo@bar.com'};
+        new_member = {name:"Bob", username:'foo', email:'foo@bar.com'};
         framework = web({port:3001, mongoose:{db:'member_stream_test'}}, function () {
-            member_model.empty(function(){
+            member_model.empty(function () {
                 _make_members(test);
             });
         });
     },
+
+    test_invalid_member:function (test) {
+        member_model.validate({}, function (v) {
+            test.deepEqual(v.errors, { email:{ message:'Validator "required" failed for path email',
+                name:'ValidatorError',
+                path:'email',
+                type:'required' },
+                username:{ message:'Validator "required" failed for path username',
+                    name:'ValidatorError',
+                    path:'username',
+                    type:'required' } }, 'blank (invalid) member errors');
+            test.done();
+        });
+    },
+
+
+    test_valid_member:function (test) {
+        member_model.validate({email: 'foo@nu.com', username: 'boo'}, function (v) {
+            console.log('valid errors: %s', util.inspect(v))
+            test.equal(v, null, 'valid member errors');
+            test.done();
+        });
+    },
+
+
 
     test_member_listing:function (test) {
 
@@ -129,6 +154,7 @@ module.exports = {
     },
 
     test_done:function (test) {
+        member_model.empty();
         framework.server().close();
         test.done();
     }

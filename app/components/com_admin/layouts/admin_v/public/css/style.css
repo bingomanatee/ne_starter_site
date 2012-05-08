@@ -279,6 +279,8 @@ border: 1px solid #333;
 	border-radius: 5px 5px 5px 0px;
 	-moz-border-radius: 5px 5px 0px 0px;
 	-webkit-border-radius: 5px 5px 0px 0px;
+    border-bottom: none;
+    text-align: center;
 }
 
 .block {
@@ -381,6 +383,7 @@ th, td {
 	padding:.2em 1em;
 	text-align:left;
 }
+
 thead {
 	border:0;
 	border-left: 0;
@@ -426,6 +429,16 @@ tfoot tr.total th {
 th.currency,
 td.currency {
 	text-align:right;
+}
+
+table.prop_table td {
+    vertical-align: top;
+}
+
+table.prop_table th {
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
 }
 
 
@@ -497,7 +510,7 @@ min-width: 100%;
 height: 28px;
 line-height: 28px;
 padding-left: 1%;
-border: 1px solid #999;
+    border: 1px solid rgb(200, 200, 255);
 }
 
 textarea.default{
@@ -514,10 +527,10 @@ border: 1px solid #999;
 
 input[type="text"], input[type="password"]{
 border-radius: 4px;
--moz-border-radius: 4px;
--webkit-border-radius: 4px;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
 border: 0;
-border: 1px solid #aaa;
+border: 1px solid rgb(200, 200, 255);
 line-height: 20px;
 background-color: #fff;
 outline: none;
@@ -587,11 +600,15 @@ margin-right: 0 !important;
 position: relative;
 min-height: 36px;
 line-height: 24px;
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
 vertical-align: middle;
+    font-size: 115%;
 border: 0;
-} 
+}
+.form_row input {
+    font-size: 100%;
+}
 
 .form_row  .grid_2{
 padding-top: 2px;/*Fix to center text verticaly*/

@@ -1,0 +1,80 @@
+<div class="container_9">
+    <div class="box">
+        <h2>Member Detail
+            <span class="l"></span>
+            <span class="r"></span>
+        </h2>
+        <section class="form_row">
+            <div class="grid_3">
+                <div class="block_content right">
+                    <b>_id</b>
+                </div>
+            </div>
+
+            <div class="grid_9">
+                <div class="block_content">
+                    <%= member._id %>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <section class="form_row">
+            <div class="grid_3">
+                <div class="block_content right">
+                    <b>name</b>
+                </div>
+            </div>
+
+            <div class="grid_9">
+                <div class="block_content">
+                    <%= member.name %>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <section class="form_row">
+            <div class="grid_3">
+                <div class="block_content right">
+                    <b>username</b>
+                </div>
+            </div>
+
+            <div class="grid_9">
+                <div class="block_content">
+                    <%= member.username %>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+        <section class="form_row">
+            <div class="grid_3">
+                <div class="block_content right">
+                    <b>email</b>
+                </div>
+            </div>
+
+            <div class="grid_9">
+                <div class="block_content">
+                    <%= member.email %>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+
+        <section class="form_row button_row textcenter">
+            <div class="grid_6">
+                <div class="block_content">
+                    <button id="member_form_edit" class="button medium orange"
+                            onclick="document.location='/admin/member/<%= member._id %>/edit'">Edit
+                    </button>
+                </div>
+            </div>
+            <div class="grid_6">
+                <div class="block_content">
+                    <button id="member_form_delete" class="button medium red">Delete</button>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </section>
+    </div>
+</div>
