@@ -1,5 +1,5 @@
 <div class="block"><h1>Tasks</h1>
-    <table class="display" id="members_list">
+    <table class="display" id="task_list">
         <thead>
         <th>task</th>
         <th>label</th>
@@ -100,7 +100,7 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function () {
-        var oTable = $('#members_list').dataTable({
+        var oTable = $('#task_list').dataTable({
             "bJQueryUI":true,
             "sPaginationType":"full_numbers",
             "sAjaxSource":"/admin/member_tasks/list.json",
@@ -110,7 +110,7 @@
         });
 
         /* Add events */
-        $('#members_list tbody tr').live('click', function () {
+        $('#task_list tbody tr').live('click', function () {
             var sTitle;
             var nTds = $('td', this);
             var id = $(nTds[0]).text();

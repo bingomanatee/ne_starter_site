@@ -14,11 +14,15 @@ module.exports = {
 
     validate:function (rs) {
         if (!rs.req_props.id){
-            rs.flash('error', 'Member ID missing');
-            rs.go('/admin/member_tasks');
+            this.on_validate_error(rs, 'Cannot find ID');
         } else {
-            this.on_route(rs);
+            this.on_input(rs);
         }
+    },
+
+    on_validate_error: function(rs, err){
+        rs.flash('error', err);
+        rs.go('/admin/member_tasks');
     },
 
     on_input:function (rs) {
@@ -30,11 +34,15 @@ module.exports = {
 
     on_process: function(rs, err, task){
         if (err){
-            req.flash('error', 'cannot find task with id ' + req_props.id);
-            req.go('/admin/member_tasks');
+            this.on_process_error(rs, 'cannot find task with id ' + rs.req_props.id);
         } else {
             this.on_output(rs, {task: task, active_menu: 'admin_members_list'});
         }
+    },
+
+    on_process_error: function(rs, err){
+        req.flash('error', err);
+        req.go('/admin/member_tasks');
     }
 
 }

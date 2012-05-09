@@ -7,7 +7,7 @@
     </h2>
 
     <div class="block">
-        <form action="/admin/member_task/0/new" class="form_place" method="POST" onsubmit="return check_form(this)">
+        <form action="/admin/member_task/<%= task._id %>/edit" class="form_place" method="POST" onsubmit="return check_form(this)">
             <section class="grid_7">
 
                 <section class="form_row">
@@ -61,27 +61,23 @@
 
             <container class="form_row grid_2">
                 <h3>Verbs</h3>
-
+<% [{verb: 'create', label: 'Create'}, {verb: 'edit', label: 'Edit'}, {verb: 'delete', label: 'Delete'}, {verb: 'assign', label: 'Assign'}].forEach(function(data){ %>
                 <div class="block_content">
-                    <label> <input type="checkbox" name="task[verbs][]" value="create" id="tvc" checked="checked"/>
+                    <label> <input type="checkbox" name="task[verbs][]" value="<%= data.verb %>" id="verb_<%= data.verb %>"
+               <% if (task.verbs) {
+                  task.verbs.forEach(function(verb){
+                        if (verb == data.verb) {
+                        %>
+                        checked="checked"
+                       <%
+                        }
 
-                        Create</label>
+                        });
+                        } %> />
+<%= data.label %></label>
                 </div>
-                <div class="block_content">
-                    <label> <input type="checkbox" name="task[verbs][]" value="edit" id="tve" checked="checked"/>
+ <% }) %>
 
-                        Edit</label>
-                </div>
-                <div class="block_content">
-                    <label> <input type="checkbox" name="task[verbs][]" value="delete" id="tvd" checked="checked"/>
-
-                        Delete</label>
-                </div>
-                <div class="block_content">
-                    <label> <input type="checkbox" name="task[verbs][]" value="assign" checked="checked"/>
-
-                        Assign</label>
-                </div>
             </container>
 
             <container class="form_row grid_3">
@@ -91,3 +87,8 @@
         </form>
     </div>
 </div>
+
+        <pre>
+
+            <%= JSON.stringify(task) %>
+        </pre>

@@ -274,11 +274,11 @@ border: 1px solid #333;
 
 .box h2 {
 	font-family: "Helvetica", Arial, sans-serif;
-	font-size:120%;
+	font-size:150%;
 	font-weight:bold;
-	color: rgb(50, 50, 50);
+	color: rgba(0, 0, 0, 0.666);
     margin:0px;
-	padding:4px;
+	padding:10px;
 	padding-left: 15px;
 	padding-right: 45px;
 	border-radius: 5px 5px 5px 0px;

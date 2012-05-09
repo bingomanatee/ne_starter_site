@@ -14,11 +14,15 @@ module.exports = {
 
     on_get_validate:function (rs) {
         if (!rs.req_props.id) {
-            rs.flash('error', 'Member ID missing');
-            rs.go('/admin/admin/home');
+            this.on_get_validate_error(rs, 'ID missing');
         } else {
             this.on_get_input(rs);
         }
+    },
+
+    on_get_validate_error:function (rs, err) {
+        rs.flash('error', err);
+        rs.go('/admin/admin/home');
     },
 
     on_get_input:function (rs) {
@@ -26,56 +30,70 @@ module.exports = {
         if (!rs.req_props.save_err) {
             rs.req_props.save_err = false;
         }
-        this.models.members_members.get(rs.req_props.id, function (err, member) {
-            self.on_get_process(rs, err, member);
+        this.models.members_tasks.get(rs.req_props.id, function (err, task) {
+            self.on_get_process(rs, err, task);
         })
     },
 
-    on_get_process:function (rs, err, member) {
+    on_get_process:function (rs, err, task) {
         if (err) {
-            req.flash('error', 'cannot find member with id ' + rs.req_props.id);
-            rs.go('/admin/admin/home');
+            this.on_get_process_error(rs, 'Cannot get edit task: ' + err.toString());
         } else {
-            this.on_output(rs, {member:member, active_menu:'admin_members_list'});
+            this.on_output(rs, {task:task, active_menu:'admin_member_tasks'});
         }
+    },
+
+    on_get_process_error:function (rs, err) {
+        rs.flash('error', err);
+        rs.go('/admin/admin/home');
     },
 
     /* **************** POST RESPONSE_METHODS ************ */
 
     on_post_validate:function (rs) {
         if (!rs.req_props.id) {
-            rs.flash('error', 'Member ID missing');
-            rs.go('/admin/admin/home');
-        } else if (!rs.req_props.member){
-            rs.flash('error', 'Member Data Missing');
-            rs.go('/admin/member/' + rs.req_props.id + '/edit');
+            this.on_post_validate_error(rs, 'ID Missing');
+        } else if (!rs.req_props.task) {
+            this.on_post_validate_error(rs, 'Member Data Missing');
         } else {
             this.on_post_process(rs);
         }
     },
 
+    on_post_validate_error:function (rs, err) {
+        rs.flash('error', err);
+        rs.go('/admin/member_task/' + rs.req_props.id + '/edit');
+    },
+
     on_post_process:function (rs) {
         var self = this;
-        this.models.members_members.get(rs.req_props.id, function (err, member)
-        {
+        this.models.members_tasks.get(rs.req_props.id, function (err, task) {
             //@TODO: error check
 
-            var member_data = rs.req_props.member;
+            var member_data = rs.req_props.task;
             delete member_data._id;
-            _.extend(member, member_data);
+            _.extend(task, member_data);
 
-            member.save( function (err) {
+            task.save(function (err) {
                 if (err) {
                     // this should be redundant to on_post_validate but you never know.
                     rs.req_props.err = err;
-                    rs.flash('error', 'Cannot save member');
-                    console.log('post process error: %s', util.inspect(err));
+                    self.on_post_process_error(rs, 'Cannot save task: ' + err.toString());
                 } else {
-                    rs.flash('info', 'Member saved');
+                    self.on_post_output(rs, task);
                 }
-                rs.go('/admin/member/' + member._id.toString());
             });
         });
 
+    },
+
+    on_post_output: function(rs, task){
+        rs.flash('info', 'Task saved');
+        rs.go('/admin/member_task/' + task._id.toString());
+    },
+
+    on_post_process_error:function (rs, msg) {
+        rs.flash('error', msg);
+        rs.go('/admin/member_task/' + rs.req_props.id);
     }
 }

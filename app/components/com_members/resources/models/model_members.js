@@ -1,12 +1,19 @@
 var mm = require('support/mongoose_model');
 var mongoose = require('mongoose');
 
+var task = new mongoose.Schema({
+    _id: String,
+    label: String,
+    verbs: [String]
+})
+
 var schema = new mongoose.Schema({
     name:{type:String, required:false},
     username:{type:String, required:true},
     email:{type:String, required:true},
     password:{type:String, require:true},
-    deleted:Boolean
+    deleted:Boolean,
+    tasks: [task]
 });
 
 schema.statics.active = function(cb){

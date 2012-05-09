@@ -13,17 +13,21 @@ module.exports = {
     /* *************** RESPONSE METHODS ************** */
 
     validate:function (rs) {
-        if ((rs.req_props.id)){
+        if ((rs.req_props.id)) {
             this.on_input(rs);
         } else {
-            rs.flash('error', 'no id');
-            rs.go('/admin/members/list')
+            this.on_validate_fail(rs, 'no id');
         }
+    },
+
+    on_validate_fail:function (rs, err) {
+        rs.flash('error', err);
+        rs.go('/admin/members/list')
     },
 
     on_input:function (rs) {
         var self = this;
-        this.models.members_members.get(rs.req_props.id, function(err, member){
+        this.models.members_members.get(rs.req_props.id, function (err, member) {
             self.on_process(rs, member);
         });
 
@@ -31,10 +35,15 @@ module.exports = {
 
     on_process:function (rs, member) {
         member.deleted = true;
-        member.save(function(){
-            rs.flash('info', util.inspect('member %s deleted', rs.req_props.id));
-            rs.go('/admin/members/list');
+        var self = this;
+        member.save(function () {
+            self.on_input(rs, member);
         })
+    },
+
+    on_input:function (rs, member) {
+        rs.flash('info', util.inspect('member %s deleted', rs.req_props.id));
+        rs.go('/admin/members/list');
     }
 
 }

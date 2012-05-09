@@ -79,10 +79,10 @@
         </form>
     </div>
 </div>
-<% if (save_err){ %>
+<% if (save_error){ %>
 
 <script language="javascript">
-    var errs = <%- JSON.stringify(save_err) %>;
+    var errs = <%- JSON.stringify(save_error) %>;
 
     for (var prop in errs.errors){
         var prop_err = errs.errors[prop];

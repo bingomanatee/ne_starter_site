@@ -14,8 +14,7 @@ module.exports = {
 
     validate:function (rs) {
         if (!rs.req_props.task){
-            rs.flash('error', 'no task found for new task');
-            rs.go('/admin/member_tasks');
+            this.on_validate_error(rs, 'No Task');
         } else  {
             var self = this;
             rs.req_props.task._id = rs.req_props._id.replace(/[ ]+/g, '_').toLowerCase();
@@ -25,21 +24,34 @@ module.exports = {
         }
     },
 
+    on_validate_error: function(rs, err){
+        rs.flash('error', err);
+        rs.go('/admin/member_tasks');
+    },
+
     on_input:function (rs, err, task) {
         if (err){
-            rs.flash('error', 'cannot save task: ', task.toString());
-            rs.go('/admin/member_tasks');
+            this.on_input_error(rs, 'cannot save task: ' + err.toString());
         } else {
            this.on_process(rs, task);
         }
     },
 
+    on_input_error: function(rs, err){
+        rs.flash('error', err);
+        rs.go('/admin/member_tasks');
+    },
+
     on_process:function (rs, task) {
         var self = this;
         task.save(function(){
-            rs.flash('info', 'Saved Task ' + task._id.toString());
-            rs.go('/admin/member_tasks/list');
+            self.on_output(rs, task);
         });
+    },
+
+    on_output: function(rs, task){
+        rs.flash('info', 'Saved Task ' + task._id.toString());
+        rs.go('/admin/member_tasks/list');
     }
 
 }
