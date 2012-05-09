@@ -1,5 +1,0 @@
-{
-    "javascript":["/admin/plugins/datatables/media/js/jquery.dataTables.js"],
-    "route": "/admin/members/list",
-    "css": ["/admin/plugins/datatables/media/css/demo_table_jui.css"]
-}

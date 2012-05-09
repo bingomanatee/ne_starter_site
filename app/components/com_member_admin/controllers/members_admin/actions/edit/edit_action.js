@@ -33,28 +33,25 @@ module.exports = {
 
     on_get_process:function (rs, err, member) {
         if (err) {
-            req.flash('error', 'cannot find member with id ' + req_props.id);
+            req.flash('error', 'cannot find member with id ' + rs.req_props.id);
             rs.go('/admin/admin/home');
         } else {
-            this.on_output(rs, {member:member, save_err:rs.req_props.save_err, active_menu:'admin_members_list'});
+            this.on_output(rs, {member:member, active_menu:'admin_members_list'});
         }
     },
 
     /* **************** POST RESPONSE_METHODS ************ */
 
     on_post_validate:function (rs) {
-        var self = this;
-        console.log('saving member: data = %s', JSON.stringify(rs.req_props));
-
-        this.models.members_members.validate(rs.req_props.member, function (err) {
-            if (err) {
-                rs.req_props.save_err = err;
-                rs.flash('error', 'Cannot save member');
-                self.on_get_validate(rs);
-            } else {
-                self.on_post_process(rs);
-            }
-        })
+        if (!rs.req_props.id) {
+            rs.flash('error', 'Member ID missing');
+            rs.go('/admin/admin/home');
+        } else if (!rs.req_props.member){
+            rs.flash('error', 'Member Data Missing');
+            rs.go('/admin/member/' + rs.req_props.id + '/edit');
+        } else {
+            this.on_post_process(rs);
+        }
     },
 
     on_post_process:function (rs) {

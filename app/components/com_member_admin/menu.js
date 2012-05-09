@@ -6,6 +6,6 @@ module.exports = [
         link:'/admin/members/add', weight:101, id: 'admin_members_add', type:'admin_menu', icon: 'member'
     },
     {label:'Privileges',
-        link:'/admin/priv/list', weight:102, id: 'admin_member_priv', type:'admin_menu', icon: 'priv'
+        link:"/admin/member_tasks/list", weight:102, id: 'admin_member_tasks', type:'admin_menu', icon: 'priv'
     }
 ]

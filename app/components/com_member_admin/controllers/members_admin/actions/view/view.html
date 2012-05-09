@@ -62,16 +62,24 @@
         </section>
 
         <section class="form_row button_row textcenter">
-            <div class="grid_6">
+            <div class="grid_4">
+                <div class="block_content">
+                    <button id="member_form_cancel" class="button medium"
+                            onclick="document.location='/admin/members/list'">Return to list
+                    </button>
+                </div>
+            </div>
+            <div class="grid_4">
                 <div class="block_content">
                     <button id="member_form_edit" class="button medium orange"
                             onclick="document.location='/admin/member/<%= member._id %>/edit'">Edit
                     </button>
                 </div>
             </div>
-            <div class="grid_6">
+            <div class="grid_4">
                 <div class="block_content">
-                    <button id="member_form_delete" class="button medium red">Delete</button>
+                    <button id="member_form_delete" onClick="document.location='/admin/member/<%= member._id %>/delete'"
+                            class="button medium red">Delete</button>
                 </div>
             </div>
             <div class="clear"></div>

@@ -378,7 +378,8 @@ table.display tr.odd.row_selected td {
  */
 /* For the standard odd/even */
 tr.odd td.sorting_1 {
-	background-color: #D3D6FF;
+	background-color: rgb(255, 255, 240);
+    background-image: none;
 }
 
 tr.odd td.sorting_2 {
@@ -390,7 +391,8 @@ tr.odd td.sorting_3 {
 }
 
 tr.even td.sorting_1 {
-	background-color: #EAEBFF;
+	background-color:  rgb(240, 240, 220);
+    background-image: none;
 }
 
 tr.even td.sorting_2 {

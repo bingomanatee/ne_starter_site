@@ -77,9 +77,9 @@ module.exports = {
         console.log('input: %s', util.inspect(input, true, 3));
         var dis_count = 0;
         var self = this;
+        input.query.deleted = {"$ne": true};
 
-
-        self.models.members_members.count(function (err, count) {
+        self.models.members_members.model.count({deleted: {"$ne": true}}, function (err, count) {
             var query = self.models.members_members.find(input.query, columns);
             query.sort.apply(query, input.sort)
                 .skip(input.skip).limit(input.limit);

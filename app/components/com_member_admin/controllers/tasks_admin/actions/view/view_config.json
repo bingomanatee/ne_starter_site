@@ -1,0 +1,4 @@
+{
+    "route": "/admin/member_task/:id",
+    "active_menu": "admin_member_tasks"
+}

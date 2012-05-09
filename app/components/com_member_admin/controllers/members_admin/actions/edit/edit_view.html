@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box form_box">
 
     <h2>Member Detail
         <span class="l"></span>
@@ -9,7 +9,8 @@
         <form action="/admin/member/<%= member._id %>/edit" class="form_place" method="POST">
             <section class="form_row">
                 <div class="grid_3">
-                    <label>_id</label>
+                    <div class="block_content right">
+                    <label>_id</label></div>
                 </div>
                 <div class="grid_9">
                     <div class="block_content">
@@ -22,7 +23,8 @@
             </section>
             <section class="form_row">
                 <div class="grid_3">
-                    <label>name</label>
+                    <div class="block_content right">
+                    <label>name</label></div>
                 </div>
                 <div class="grid_9">
                     <div class="block_content">
@@ -34,7 +36,8 @@
             </section>
             <section class="form_row">
                 <div class="grid_3">
-                    <label>username</label>
+                    <div class="block_content right">
+                    <label>username</label></div>
                 </div>
                 <div class="grid_9">
                     <div class="block_content">
@@ -46,7 +49,8 @@
             </section>
             <section class="form_row">
                 <div class="grid_3">
-                    <label>email</label>
+                    <div class="block_content right">
+                    <label>email</label></div>
                 </div>
                 <div class="grid_9">
                     <div class="block_content">
@@ -59,15 +63,15 @@
             <section class="form_row button_row textcenter">
                 <div class="grid_6">
                     <div class="block_content">
-                        <button id="member_form_edit" type="submit" class="button medium green">Save</button>
+                        <button id="member_form_edit" type="submit" class="button medium orange">Save</button>
                     </div>
                 </div>
                 <div class="grid_6">
                     <div class="block_content">
-                        <button id="member_form_delete"
+                        <div id="member_form_delete"
                                 onClick="document.location='/admin/member/<%= member._id %>'" class="button medium">
                             Cancel
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div class="clear"></div>

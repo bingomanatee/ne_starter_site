@@ -1,0 +1,93 @@
+
+<div class="box form_box">
+
+    <h2>Edit Task Subject
+        <span class="l"></span>
+        <span class="r"></span>
+    </h2>
+
+    <div class="block">
+        <form action="/admin/member_task/0/new" class="form_place" method="POST" onsubmit="return check_form(this)">
+            <section class="grid_7">
+
+                <section class="form_row">
+                    <div class="grid_3">
+                        <div class="block_content right">
+                            <label>name</label></div>
+                    </div>
+                    <div class="grid_9">
+                        <div class="block_content">
+                            <input type="text" class="i-format" id="task_form__id" readonly="readonly"
+                                   name="task[_id]" value="<%= task._id %>">
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+                <section class="form_row">
+                    <div class="grid_3">
+                        <div class="block_content right">
+                            <label>label</label></div>
+                    </div>
+                    <div class="grid_9">
+                        <div class="block_content">
+                            <input type="text" class="i-format" id="task_form_label"
+                                   name="task[label]" value="<%= task.label %>"/>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </section>
+                <section class="form_row button_row textcenter">
+                    <div class="grid_4">
+                        <div class="block_content">
+                            <button id="member_form_cancel" onclick="document.location='/admin/member_tasks'"
+                                    class="button medium">Return to list</button>
+                        </div>
+                    </div>
+                    <div class="grid_4">
+                        <div class="block_content">
+                            <button id="member_form_save" type="submit" class="button medium orange">Save</button>
+                        </div>
+                    </div>
+                    <div class="grid_4">
+                        <div class="block_content">
+                            <button id="member_form_delete" onclick="document.location='/admin/member_tasks/<%= task._id %>/delete'"
+                                    class="button medium red">Delete</button>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+            </section>
+
+            <container class="form_row grid_2">
+                <h3>Verbs</h3>
+
+                <div class="block_content">
+                    <label> <input type="checkbox" name="task[verbs][]" value="create" id="tvc" checked="checked"/>
+
+                        Create</label>
+                </div>
+                <div class="block_content">
+                    <label> <input type="checkbox" name="task[verbs][]" value="edit" id="tve" checked="checked"/>
+
+                        Edit</label>
+                </div>
+                <div class="block_content">
+                    <label> <input type="checkbox" name="task[verbs][]" value="delete" id="tvd" checked="checked"/>
+
+                        Delete</label>
+                </div>
+                <div class="block_content">
+                    <label> <input type="checkbox" name="task[verbs][]" value="assign" checked="checked"/>
+
+                        Assign</label>
+                </div>
+            </container>
+
+            <container class="form_row grid_3">
+                <h3>New Verbs</h3>
+                <textarea rows="3" name="tasks[verbs][other]" cols="20" style="height: 100px" class="default"></textarea>
+            </container>
+        </form>
+    </div>
+</div>
