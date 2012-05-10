@@ -1,0 +1,22 @@
+<span class="block_content"><label style="width: 20%; display: inline-block">
+    <input type="checkbox" name="member[tasks][<%- task._id %>][]" value="<%= verb %>"
+    <% if (member.tasks){
+
+    member.tasks.forEach(function(member_task){
+    if (member_task.task == task._id) {
+
+    member_task.verbs.forEach(function(member_verb){
+    if (member_verb == verb) { %>
+    checked="checked"
+    <%
+    }
+    })
+
+    }
+    })
+
+    } %>
+
+    /><%=
+    verb %></label>
+</span>

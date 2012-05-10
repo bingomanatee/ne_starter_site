@@ -1,0 +1,15 @@
+<% if (firstInCollection) { %>
+<section class="form_row button_row textcenter">
+    <% } %>
+    <div class="grid_<%= Math.floor(12 / collectionLength) %>">
+        <div class="block_content">
+            <button id="member_form_cancel" class="button <%= button_row.class_name ? button_row.class_name : '' %>"
+                    <% if (button_row.link) { %> onclick="<%= button_row.link'" <% } %>
+              ><%= button_row.label %>
+            </button>
+        </div>
+    </div>
+    <% if (lastInCollection) { %>
+    <div class="clear"></div>
+</section>
+<% } %>

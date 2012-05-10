@@ -593,22 +593,19 @@ margin-right: 8px !important;
 }
 
 .form_box {
-    background-color: rgba(255, 255, 240, 0.8)
+    background-color: rgb(255, 255, 220)
 }
 
 .form_box h2 {
 }
 
-.form_row {
-margin-left: 0 !important;
-margin-right: 0 !important;
-} 
-
 .form_row .grid_10 {
 margin-right: 0 !important;
 } 
 
-.form_row  {
+.form_row, .prop_row {
+margin-left: 0 !important;
+margin-right: 0 !important;
 position: relative;
 min-height: 36px;
 line-height: 24px;
