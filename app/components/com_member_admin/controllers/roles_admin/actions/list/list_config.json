@@ -1,0 +1,5 @@
+{
+    "javascript":["/admin_v/plugins/datatables/media/js/jquery.dataTables.js"],
+    "route": "/admin/member_roles/list",
+    "css": ["/admin_v/plugins/datatables/media/css/demo_table_jui.css"]
+}

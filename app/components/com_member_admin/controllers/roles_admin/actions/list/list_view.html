@@ -1,0 +1,86 @@
+<div class="block"><h1>Roles</h1>
+    <table class="display" id="role_list">
+        <thead>
+        <th>Role</th>
+        <th>Label</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>loading data...</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <th>Role</th>
+        <th>Label</th>
+        </tfoot>
+    </table>
+</div>
+
+<div class="box form_box">
+
+    <h2>New Role
+        <span class="l"></span>
+        <span class="r"></span>
+    </h2>
+
+    <div class="block">
+        <form action="/admin/member_role/0/new" class="form_place" method="POST" onsubmit="return check_form(this)">
+<%- partial('form/text_field.html', [{
+            id: 'role_form__id',
+            name: 'role[_id]',
+            label: 'Name',
+            value: role._id
+            },
+            {
+            id: 'role_form_label',
+            name: 'role[label]',
+            value: role.label,
+            label: 'Label'
+            }
+            ] ) %>
+            <h2>Tasks</h2>
+            <%- partial('task.html', tasks) %>
+            <section class="form_row button_row textcenter">
+                <div class="grid_12">
+                    <div class="block_content">
+                        <button id="member_form_edit" type="submit" class="button medium orange">Create</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+        </form>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var oTable = $('#role_list').dataTable({
+            "bJQueryUI":true,
+            "sPaginationType":"full_numbers",
+            "sAjaxSource":"/admin/member_roles/list.json",
+            "bProcessing":true,
+            "bServerSide":true,
+            "paginate":true
+        });
+
+        /* Add events */
+        $('#role_list tbody tr').live('click', function () {
+            var sTitle;
+            var nTds = $('td', this);
+            var id = $(nTds[0]).text();
+            document.location = '/admin/member_role/' + id;
+        });
+    });
+
+    function check_form() {
+        var id = $('#role_form__id').val();
+        var label = $('#role_form_label').val();
+
+        if ((!id) || (id == 'new_role')) return false;
+        if ((!label) || (label == 'New role')) return false;
+
+        return true;
+    }
+</script>
+
