@@ -1,0 +1,77 @@
+<%- helpers.banner_menu('Manage Members', 'member_admin_menu', 'admin_members_add') %>
+
+        <section class="grid_12">
+
+<div class="box form_box">
+
+    <h2>Member Detail
+        <span class="l"></span>
+        <span class="r"></span>
+    </h2>
+
+    <div class="block">
+        <form action="/admin/member/0/new" class="form_place" method="POST">
+            <%- partial('form/text_field.html', [
+            {
+            id: 'member_form_name',
+            name: 'member[name]',
+            value: member.name,
+            label: 'Name'
+            }
+            ,
+            {
+            id: 'member_form_username',
+            name: 'member[username]',
+            value: member.username,
+            label: 'Name'
+            }
+            ,
+            {
+            id: 'member_form_email',
+            name: 'member[email]',
+            value: member.email,
+            label: 'eMail'
+            }
+            ,
+            {
+            id: 'member_form_password',
+            name: 'member[password]',
+            value: member.password,
+            label: 'Password',
+            field_type: 'password'
+            }
+            ]) %>
+
+            <section class="form_row button_row textcenter">
+                <div class="grid_6">
+                    <div class="block_content">
+                        <button id="member_form_edit" type="submit" class="button medium orange">Save</button>
+                    </div>
+                </div>
+                <div class="grid_6">
+                    <div class="block_content">
+                        <div id="member_form_delete"
+                             onClick="document.location='/admin/members/list'" class="button medium">
+                            Cancel
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+        </form>
+    </div>
+</div>
+</section>
+<% if (save_error){ %>
+
+<script language="javascript">
+    var errs = <%-JSON.stringify(save_error) %>;
+
+    for (var prop in errs.errors) {
+        var prop_err = errs.errors[prop];
+        $('#member_form_' + prop).after('<p>' + prop_err.message + '</p>');
+    }
+
+</script>
+
+<% } %>

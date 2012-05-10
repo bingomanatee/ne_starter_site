@@ -15,7 +15,12 @@ var schema = new mongoose.Schema({
     tasks: [{
         _id: String,
         verbs: [String]
-    }]
+    }],
+    roles: [{
+        _id: String,
+        verbs: [String]
+    }],
+
 });
 
 schema.statics.active = function(cb){

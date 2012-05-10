@@ -1,0 +1,30 @@
+<%- helpers.banner_menu('Role View', 'member_admin_menu', 'admin_members_roles') %>
+
+<div class="container_12">
+    <div class="box">
+        <h2>Role Detail
+            <span class="l"></span>
+            <span class="r"></span>
+        </h2>
+        <%- partial('ticket/row.html', [
+        {label: '_id', value: role._id},
+        {label: 'label', value: role.label}]) %>
+
+            <h2>Tasks</h2>
+        <%
+        var rows = [];
+        role.tasks.forEach(function(task){
+            var tr = {label: task._id,
+        value: task.verbs.join(', ') };
+        rows.push(tr);
+        });
+
+        %>
+        <%- partial('ticket/row.html', rows) %>
+        <%- partial('ticket/button_row.html', [
+        {class_name: 'medium', label: 'Return to list', link: '/admin/member_roles/list'},
+        {class_name: 'medium orange', label: 'Edit', link: '/admin/member_roles/' + role._id + '/edit'},
+        {class_name: 'medium red', label: 'Delete', link: '/admin/member_roles/' + role._id + '/delete'}
+        ]) %>
+    </div>
+</div>

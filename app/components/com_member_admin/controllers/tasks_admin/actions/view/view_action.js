@@ -20,10 +20,7 @@ module.exports = {
         }
     },
 
-    on_validate_error: function(rs, err){
-        rs.flash('error', err);
-        rs.go('/admin/member_tasks');
-    },
+    _on_validate_error_go: '/admin/member_tasks',
 
     on_input:function (rs) {
         var self = this;
@@ -40,9 +37,6 @@ module.exports = {
         }
     },
 
-    on_process_error: function(rs, err){
-        req.flash('error', err);
-        req.go('/admin/member_tasks');
-    }
+    _on_process_error_go: '/admin/member_tasks'
 
 }

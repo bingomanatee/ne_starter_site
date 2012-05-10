@@ -27,10 +27,7 @@ module.exports = {
         }
     },
 
-    on_validate_error: function(rs, err){
-        rs.flash('error', err);
-        rs.go('/admin/member_roles');
-    },
+    _on_validate_error_go: '/admin/member_roles',
 
     on_input:function (rs, err, role) {
         if (err){
@@ -40,10 +37,7 @@ module.exports = {
         }
     },
 
-    on_input_error: function(rs, err){
-        rs.flash('error', err);
-        rs.go('/admin/member_roles/list');
-    },
+    _on_input_error_go: '/admin/member_roles/list',
 
     on_process:function (rs, role) {
         var self = this;
@@ -63,7 +57,7 @@ module.exports = {
 function _process_roles(md){
     tasks = [];
     _.each(md.tasks, function(verbs, name){
-        tasks.push({role: name, verbs:_.toArray(verbs)});
+        tasks.push({_id: name, verbs:_.toArray(verbs)});
     });
     md.tasks = tasks;
 }

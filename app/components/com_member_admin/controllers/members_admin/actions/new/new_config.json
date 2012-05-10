@@ -1,0 +1,4 @@
+{
+    "method": "*",
+    "get_route": "/admin/member/0/new"
+}

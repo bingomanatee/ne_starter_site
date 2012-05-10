@@ -36,10 +36,7 @@ module.exports = {
         })
     },
 
-    on_input_error:function (rs, err) {
-        rs.flash('error', err);
-        rs.go('/admin/member_tasks');
-    },
+    _on_input_error_go: '/admin/member_tasks',
 
     on_process:function (rs, member) {
         var self = this;

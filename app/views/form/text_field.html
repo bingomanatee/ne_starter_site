@@ -5,7 +5,7 @@
     </div>
     <div class="grid_9">
         <div class="block_content">
-            <input type="text" class="i-format" id="<%= textField.id %>"
+            <input type="<%= typeof field_type == 'undefined' ? 'text' : type %>" class="i-format" id="<%= textField.id %>"
                    name="<%= textField.name %>" value="<%= textField.value %>">
         </div>
     </div>

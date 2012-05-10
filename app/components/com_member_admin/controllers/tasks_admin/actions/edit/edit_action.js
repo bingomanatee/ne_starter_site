@@ -20,10 +20,7 @@ module.exports = {
         }
     },
 
-    on_get_validate_error:function (rs, err) {
-        rs.flash('error', err);
-        rs.go('/admin/admin/home');
-    },
+    _on_get_validate_error_go:'/admin/admin/home',
 
     on_get_input:function (rs) {
         var self = this;
@@ -43,10 +40,7 @@ module.exports = {
         }
     },
 
-    on_get_process_error:function (rs, err) {
-        rs.flash('error', err);
-        rs.go('/admin/admin/home');
-    },
+    _on_get_process_error_go:'/admin/admin/home',
 
     /* **************** POST RESPONSE_METHODS ************ */
 
@@ -60,9 +54,8 @@ module.exports = {
         }
     },
 
-    on_post_validate_error:function (rs, err) {
-        rs.flash('error', err);
-        rs.go('/admin/member_task/' + rs.req_props.id + '/edit');
+    _on_post_process_error_go:function (rs) {
+        return ('/admin/member_task/' + rs.req_props.id + '/edit');
     },
 
     on_post_process:function (rs) {
@@ -87,13 +80,8 @@ module.exports = {
 
     },
 
-    on_post_output: function(rs, task){
+    on_post_output:function (rs, task) {
         rs.flash('info', 'Task saved');
         rs.go('/admin/member_task/' + task._id.toString());
-    },
-
-    on_post_process_error:function (rs, msg) {
-        rs.flash('error', msg);
-        rs.go('/admin/member_task/' + rs.req_props.id);
     }
 }

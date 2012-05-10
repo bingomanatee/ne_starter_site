@@ -17,17 +17,14 @@ module.exports = {
             this.on_validate_error(rs, 'No Task');
         } else  {
             var self = this;
-            rs.req_props.task._id = rs.req_props._id.replace(/[ ]+/g, '_').toLowerCase();
+            rs.req_props.task._id = rs.req_props.task._id.replace(/[ ]+/g, '_').toLowerCase();
             this.models.members_tasks.validate(rs.req_props.task, function(err, task){
                 self.on_input(rs, err, task);
             })
         }
     },
 
-    on_validate_error: function(rs, err){
-        rs.flash('error', err);
-        rs.go('/admin/member_tasks');
-    },
+    _on_validate_error_go: '/admin/member_tasks',
 
     on_input:function (rs, err, task) {
         if (err){
@@ -37,10 +34,7 @@ module.exports = {
         }
     },
 
-    on_input_error: function(rs, err){
-        rs.flash('error', err);
-        rs.go('/admin/member_tasks');
-    },
+    _on_input_error_go: '/admin/member_tasks',
 
     on_process:function (rs, task) {
         var self = this;

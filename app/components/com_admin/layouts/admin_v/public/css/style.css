@@ -733,6 +733,41 @@ background: url(../images/logo.png) no-repeat 0 0 scroll;
 outline: none;
 }
 
+/* == Admin Menu == */
+
+section.banner .box {
+    border-color: black;
+    border-width: 2px;
+
+    -webkit-border-radius: 16px;
+
+    border-radius: 16px;
+    padding: 1.5em;
+
+}
+
+section.banner h1 {
+    float: left;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0px;
+}
+section.banner a.menu_item {
+    float: left;
+    display: block;
+    padding: 0em;
+    font-size: 130%;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0px 1em;
+    font-weight: normal;
+}
+
+section.banner a.active {
+    color: black !important;
+    font-weight: bold !important;
+}
+
 /* == Sidebar Menu == */
 ul#menu {
 list-style:none;
