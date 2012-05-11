@@ -16,19 +16,20 @@ module.exports = {
         if ((rs.req_props.id)) {
             this.on_input(rs);
         } else {
-            this.on_validate_fail(rs, 'no id');
+            this.on_validate_error(rs, 'no id');
         }
     },
 
-    on_validate_fail:function (rs, err) {
-        rs.flash('error', err);
-        rs.go('/admin/members/list')
-    },
+    _on_validate_error_go: '/admin/members/list',
 
     on_input:function (rs) {
         var self = this;
         this.models.members_members.get(rs.req_props.id, function (err, member) {
-            self.on_process(rs, member);
+            if (err){
+                self._on_input_error(rs, 'cannot get member ' + rs.req_props.id);
+            } else {
+                self.on_process(rs, member);
+            }
         });
 
     },

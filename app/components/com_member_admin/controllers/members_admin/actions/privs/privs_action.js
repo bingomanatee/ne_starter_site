@@ -14,30 +14,26 @@ module.exports = {
 
     on_get_validate:function (rs) {
         if (!rs.req_props.id) {
-            this.on_get_validate_fail(rs, 'No ID in rs');
+            this.on_get_validate_error(rs, 'No ID in rs');
         } else {
             this.on_get_input(rs);
         }
     },
 
-    on_get_validate_fail:function (rs, msg) {
-        console.log('on_get_validate_fail: ' + msg);
-        rs.flash('error', msg);
-        rs.go('/admin/admin/home');
-    },
+    _on_get_validate_error_go: '/admin/admin/home',
 
     on_get_input:function (rs) {
         var self = this;
 
         this.models.members_members.get(rs.req_props.id, function(err, member){
             if (err){
-                self.on_get_input_fail(rs, 'cannot get member: ' + err.toString());
+                self.on_get_input_error(rs, 'cannot get member: ' + err.toString());
             } else {
                 self.models.members_tasks.all(function(err, tasks){
                     if (err){
-                        self.on_get_input_fail(rs, 'cannot get tasks: ', + err.toString());
+                        self.on_get_input_error(rs, 'cannot get tasks: ', + err.toString());
                     } else if (!member){
-                        self.on_get_input_fail(rs, 'cannot find member ' + rs.req_props.id);
+                        self.on_get_input_error(rs, 'cannot find member ' + rs.req_props.id);
                     } else {
                         self.on_get_process(rs, {member: member, tasks: tasks});
                     }
@@ -46,10 +42,7 @@ module.exports = {
         });
     },
 
-    on_get_input_fail:function (rs, msg) {
-        rs.flash('error', msg);
-        rs.go('/admin/members_list');
-    },
+    _on_get_input_error_go: '/admin/members_list',
 
     on_get_process:function (rs, input) {
         console.log('output: %s', util.inspect(input));
@@ -65,19 +58,15 @@ module.exports = {
 
     on_post_validate:function (rs) {
         if (!rs.req_props.id) {
-            this.on_post_validate_fail(rs, 'Member ID missing');
+            this.on_post_validate_error(rs, 'Member ID missing');
         } else if (!rs.req_props.member) {
-            this.on_post_validate_fail(rs, 'no member data', '/admin/members/list')
+            this.on_post_validate_error(rs, 'no member data', '/admin/members/list')
         } else {
             this.on_post_process(rs);
         }
     },
 
-    on_post_validate_fail:function (rs, msg, route) {
-        console.log('process update fail: ' + msg);
-        rs.flash('error', msg);
-        rs.go(route ? route : '/admin/admin/home');
-    },
+    _on_post_validate_error_go: '/admin/admin/home',
 
     on_post_process:function (rs) {
         var self = this;
@@ -94,7 +83,7 @@ module.exports = {
             member.save(function (err) {
                 if (err) {
                     rs.req_props.save_error = err;
-                    self.on_post_process_fail(rs, util.format('Cannot save member: %s', util.inspect(err, true)), member);
+                    self.on_post_process_error(rs, util.format('Cannot save member: %s', util.inspect(err, true)), member);
 
                 } else {
                     self.on_post_output(rs, {member: member} );
@@ -103,12 +92,7 @@ module.exports = {
         });
     },
 
-    on_post_process_fail:function (rs, msg) {
-        console.log('on_post_process_fail: ' + msg);
-        rs.flash('error', msg);
-        rs.go('/admin/members/list');
-
-    },
+    _on_post_process_error_go: '/admin/members/list',
 
     on_post_output:function (rs, input) {
         rs.flash('info', 'Member saved');

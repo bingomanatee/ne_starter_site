@@ -14,15 +14,12 @@ module.exports = {
 
     validate:function (rs) {
         if (!rs.req_props.id) {
-            this.on_validate_fail(rs);
+            this.on_validate_error(rs);
         }
         this.on_input(rs);
     },
 
-    on_validate_fail:function (rs) {
-        rs.flash('error', 'no id');
-        rs.go('/admin/member_tasks');
-    },
+    _on_validate_error_go: '/admin/member_tasks',
 
     on_input:function (rs) {
 
