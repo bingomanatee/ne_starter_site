@@ -19,7 +19,10 @@ module.exports = {
                 if (err) {
                     self.rest_err(rs, err);
                 } else {
-                    self.on_output(rs, member.toObject());
+                    var json = member.toJSON();
+                    delete json.password;
+                    delete json.email;
+                    self.on_output(rs, json);
                 }
             }
         );
@@ -28,8 +31,8 @@ module.exports = {
     on_put:function (rs) {
         var self = this;
         var mm = this.models.members_members.model;
-      //  console.log('mmm = %s', util.inspect(mm));
-       // console.log('putting member %s', util.inspect(rs.req_props));
+    //    console.log('MEMBER REST ACTION: >> req: %s', util.inspect(rs.req, true, 1));
+      //  console.log('putting member %s', util.inspect(rs.req_props));
         var new_member = new mm(rs.req_props);
         new_member.validate(function (err) {
             if (err) {
@@ -37,17 +40,17 @@ module.exports = {
             } else {
                 new_member.save(function (err) {
                     if (err) {
-                        self.rest_err(rs, err);
+                        self._on_put_process_error(rs, err.toString());
                     } else {
-                        self.on_output(rs, new_member.toObject());
+                        var json = new_member.toJSON();
+                        delete json.password;
+                        delete json.email;
+                    //    console.log('new member JSON: %s', JSON.stringify(json));
+                        self.on_output(rs, json);
                     }
                 })
             }
         });
-    },
-
-    rest_err:function (rs, err) {
-        rs.send({"err":err.toString()}, 400);
     }
 
 }
