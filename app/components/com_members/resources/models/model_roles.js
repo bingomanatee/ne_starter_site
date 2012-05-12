@@ -15,7 +15,7 @@ var schema = new mongoose.Schema({
 });
 
 schema.statics.active = function(cb){
-    return this.find('deleted', {'$ne': true}).run(cb);
+    return this.find({'deleted': {'$ne': true}}).run(cb);
 }
 
 var _model = mm.create(schema, {name:"members_roles", type:"model"});

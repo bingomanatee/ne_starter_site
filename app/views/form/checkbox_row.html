@@ -1,0 +1,14 @@
+<section class="form_row">
+    <div class="grid_3">
+        <div class="block_content right">
+            <label><%- checkboxRow.label %></label></div>
+    </div>
+    <div class="grid_9">
+        <div class="block_content">
+           <% checkboxRow.checkboxes.forEach(function(cb){ %>
+            <label><input type="checkbox" name="<%- cb.name %>" value="<%- cb.value %>" <% if (cb.checked) { %> checked="checked"<% } %> /> <%- cb.label %></label><br />
+            <% }) %>
+        </div>
+    </div>
+    <div class="clear"></div>
+</section>

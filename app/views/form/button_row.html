@@ -1,13 +1,14 @@
 <% if (firstInCollection) { %>
-<section class="form_row button_row textcenter">
+<section class="form_row button_row textcenter" xmlns="http://www.w3.org/1999/html">
     <% } %>
     <div class="grid_<%= Math.floor(12 / collectionLength) %>">
         <div class="block_content">
-            <button id="member_form_cancel" class="button <%= buttonRow.class_name ? buttonRow.class_name : '' %>"
+          <%- buttonRow.link ? '<a' : '<button' %>
+            << id="member_form_cancel" class="button <%= buttonRow.class_name ? buttonRow.class_name : '' %>"
             <% if (buttonRow.link) { %> onclick="document.location='<%= buttonRow.link%>'" <% } %>
 
             ><%= buttonRow.label %>
-            </button>
+            <%- buttonRow.link ? '</a>' : '</button>' %>
         </div>
     </div>
     <% if (lastInCollection) { %>

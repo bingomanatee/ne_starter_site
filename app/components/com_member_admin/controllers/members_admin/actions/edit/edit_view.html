@@ -10,35 +10,18 @@
             <input type="hidden" name="_id" value="<%- member._id %>" />
 
 <%- partial('form/text_field.html', [
-{
-id: 'member_form_name',
-name: 'member[name]',
-label: 'Name',
-value: member.name
-},
-{
-id: 'member_form_username',
-name: 'member[username]',
-label: 'Name',
-value: member.username
-},
-{
-id: 'member_form_email',
-name: 'member[email]',
-label: 'Name',
-value: member.email
-}
-]
+{ id: 'member_form_name',         name: 'member[name]',       label: 'Name',      value: member.name },
+{ id: 'member_form_username',     name: 'member[username]',   label: 'Username',      value: member.username },
+{ id: 'member_form_email',        name: 'member[email]',      label: 'eMail',      value: member.email }
+])
 %>
-<h2>Roles</h2>
+            <%- partial('form/checkbox_row.html', [role_checkboxes]) %>
 
-
-<%- partial('form/button_row.html', [
-{class_name: 'medium', label: 'Back to List', link: '/admin/members/list'},
-{class_name: 'medium orange', label: 'Update', button_type: 'submit'},
-{class_name: 'medium red', label: 'Delete', link: '/admin/member/' + member._id + '/delete' }
+            <%- partial('form/button_row.html', [
+{class_name: 'medium',          label: 'Back to List',  link: '/admin/members/list'},
+{class_name: 'medium orange',   label: 'Update',        button_type: 'submit'},
+{class_name: 'medium red',      label: 'Delete',        link: '/admin/member/' + member._id + '/delete' }
 ]) %>
-
         </form>
     </div>
 </div>
@@ -53,5 +36,4 @@ value: member.email
     }
 
 </script>
-
-        <% } %>
+<% } %>

@@ -83,10 +83,8 @@ module.exports = {
         var self = this;
 
         var member_data = rs.req_props.role;
-        console.log(' >>>>>>>>>>>>>>> member_data: ' + JSON.stringify(member_data));
         delete member_data._id;
         _process_tasks(member_data);
-        console.log(' >>>>>>>>>>>>>>> member_data, filtered: ' + JSON.stringify(member_data));
 
         while(role.tasks.length > 0){
             role.tasks[0].remove();
