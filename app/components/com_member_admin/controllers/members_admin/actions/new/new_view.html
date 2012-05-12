@@ -42,22 +42,12 @@
             }
             ]) %>
 
-            <section class="form_row button_row textcenter">
-                <div class="grid_6">
-                    <div class="block_content">
-                        <button id="member_form_edit" type="submit" class="button medium orange">Save</button>
-                    </div>
-                </div>
-                <div class="grid_6">
-                    <div class="block_content">
-                        <div id="member_form_delete"
-                             onClick="document.location='/admin/members/list'" class="button medium">
-                            Cancel
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </section>
+            <%- partial('form/button_row.html', [
+            {class_name: 'medium', label: 'Return to list', link: '/admin/members/list'},
+            {class_name: 'medium', label: 'View', link: '/admin/member_roles' + member._id},
+            {class_name: 'medium orange', label: 'save', type: 'submit', link: '/admin/member/' + member._id.toString() + '/edit'}
+            ]) %>
+
         </form>
     </div>
 </div>

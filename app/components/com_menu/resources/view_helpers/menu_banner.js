@@ -26,7 +26,6 @@ module.exports = {
             if (!menu){
                 throw new Error('Cannot find banner menu ' + type);
             }
-            console.log('menu: %s', util.inspect(menu, false, 2));
             return _banner_menu_template({title: title, menu: menu, active_menu: active_id});
         }
 

@@ -2,7 +2,7 @@ module.exports = {
 
     on_input:function (rs) {
         var self = this;
-        self.models.members_tasks.all(function (err, tasks) {
+        self.models.members_tasks.model.active(function (err, tasks) {
             if (err) {
                 self.on_get_input_error(rs, 'cannot get tasks: ' + err.toString());
             } else {

@@ -4,13 +4,13 @@
             <span class="l"></span>
             <span class="r"></span>
         </h2>
-        <%- partial('ticket/row.html', [
+        <%- partial('form/row.html', [
         {label: '_id', value: member._id},
         {label: 'name', value: member.name},
         {label: 'eMail', value: member.email},
         {label: 'username', value: member.username}]) %>
 
-        <%- partial('ticket/button_row.html', [
+        <%- partial('form/button_row.html', [
         {class_name: 'medium', label: 'Return to list', link: '/admin/members/list'},
         {class_name: 'medium orange', label: 'Edit', link: '/admin/member/' + member._id.toString() + '/edit'},
         {class_name: 'medium red', label: 'Delete', link: '/admin/member/' + member._id.toString() + '/delete'},

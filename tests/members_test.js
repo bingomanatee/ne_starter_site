@@ -3,6 +3,7 @@ var uri = 'http://localhost:3001/';
 var request = require('request');
 var member_model = require('./../app/components/com_members/resources/models/model_members')();
 var new_member;
+var new_member_no_pass_email;
 var factory = require('support/mongoose_model/factory');
 var fs = require('fs');
 var _ = require('underscore');
@@ -81,7 +82,17 @@ var framework;
 module.exports = {
 
     setup:function (test) {
-        new_member = {name:"Bob", username:'foo', email:'foo@bar.com'};
+        new_member = {name:"Bob", username:'foo', password: 'boo', email:'foo@bar.com', roles: [{name: "foo", tasks: []}], deleted: false};
+        new_member_no_pass_email = {};
+        _.each(new_member, function(value, key){
+            switch (key){
+                case 'password': break;
+                case 'email': break;
+                default:
+                    new_member_no_pass_email[key] = value;
+
+            }
+        })
         framework = web({port:3001, mongoose:{db:'member_stream_test'}}, function () {
             member_model.empty(function () {
                 _make_members(test);
@@ -91,27 +102,36 @@ module.exports = {
 
     test_invalid_member:function (test) {
         member_model.validate({}, function (v) {
-            test.deepEqual(v.errors, { email:{ message:'Validator "required" failed for path email',
-                name:'ValidatorError',
-                path:'email',
-                type:'required' },
-                username:{ message:'Validator "required" failed for path username',
+            test.deepEqual(v.errors, {
+                password:{
+                    message:'Validator "required" failed for path password',
+                    name:'ValidatorError',
+                    path:'password',
+                    type:'required' },
+                email:{
+                    message:'Validator "required" failed for path email',
+                    name:'ValidatorError',
+                    path:'email',
+                    type:'required' },
+                username:{
+                    message:'Validator "required" failed for path username',
                     name:'ValidatorError',
                     path:'username',
-                    type:'required' } }, 'blank (invalid) member errors');
+                    type:'required' }
+            }, 'blank (invalid) member errors');
+
             test.done();
         });
     },
 
 
     test_valid_member:function (test) {
-        member_model.validate({email: 'foo@nu.com', username: 'boo'}, function (v) {
-            console.log('valid errors: %s', util.inspect(v))
+        member_model.validate({email:'foo@nu.com', username:'boo', password: 'foo'}, function (v) {
+          //  console.log('valid errors: %s', util.inspect(v))
             test.equal(v, null, 'valid member errors');
             test.done();
         });
     },
-
 
 
     test_member_listing:function (test) {
@@ -129,22 +149,25 @@ module.exports = {
     },
 
     test_member_REST:function (test) {
-
-        request.put({uri:uri + 'members', form:new_member},
+     //   console.log('new member put input: %s', util.inspect(new_member));
+        request.put({uri:uri + 'members', json: new_member},
             function (e, res, body) {
+                if (e) throw e;
                 try {
-                    var parsed_member = JSON.parse(body);
+             //       console.log('body: %s is a %s', util.inspect(body), typeof body);
+                    var parsed_member = _.clone(body) ;
                 } catch (err) {
-                    test.ok(false, 'cannot parse ' + body + err.toString());
+                    test.ok(false, 'cannot parse body: ' + err.toString());
                     return test.done();
                 }
 
                 var id = parsed_member['_id'];
                 delete parsed_member._id;
-                test.deepEqual(parsed_member, new_member, 'added new member');
+                test.deepEqual( new_member_no_pass_email, parsed_member,'added new member');
 
                 request.get(uri + 'members/' + id, function (err, res, gbody) {
-                    //    console.log('getting ' + gbody);
+               //         console.log('getting ' + gbody);
+                    if (_.isString(gbody)) gbody= JSON.parse(gbody);
                     test.deepEqual(body, gbody, 'get gets same member back');
                     test.done();
                 });
@@ -154,7 +177,7 @@ module.exports = {
     },
 
     test_done:function (test) {
-        member_model.empty();
+      //  member_model.empty();
         framework.server().close();
         test.done();
     }

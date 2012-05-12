@@ -17,7 +17,6 @@ module.exports = {
             this.on_validate_error(rs, 'No Task');
         } else  {
             var self = this;
-            rs.req_props.task._id = rs.req_props.task._id.replace(/[ ]+/g, '_').toLowerCase();
             this.models.members_tasks.validate(rs.req_props.task, function(err, task){
                 self.on_input(rs, err, task);
             })

@@ -1,6 +1,6 @@
 var _ = require('underscore');
 var util = require('util');
-var columns = ['_id', 'label'];
+var columns = ['_id',  'name', 'label'];
 var Datatable_JSON = require('app_support/Datatable_JSON');
 
 module.exports = {

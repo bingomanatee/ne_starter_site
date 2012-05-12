@@ -24,28 +24,28 @@ module.exports = {
     on_input:function (rs) {
 
         var self = this;
-        this.models.members_members.get(rs.req_props.id, function (err, member) {
+        this.models.members_tasks.get(rs.req_props.id, function (err, task) {
             if (err) {
                 self.on_input_error(rs, err.toString());
             } else {
-                self.on_process(rs, member);
+                self.on_process(rs, task);
             }
         })
     },
 
     _on_input_error_go: '/admin/member_tasks',
 
-    on_process:function (rs, member) {
+    on_process:function (rs, task) {
         var self = this;
-        member.deleted = true;
-        member.save(function () {
+        task.deleted = true;
+        task.save(function () {
             self.on_output(rs);
         })
     },
 
     on_output:function (rs) {
-        rs.flash('info', 'member deleted');
-        rs.go('/admin/members/list');
+        rs.flash('info', 'task deleted');
+        rs.go('/admin/member_tasks/list');
     }
 
 }

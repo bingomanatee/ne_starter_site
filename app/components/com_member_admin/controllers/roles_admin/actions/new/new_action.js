@@ -13,51 +13,46 @@ module.exports = {
     /* *************** RESPONSE METHODS ************** */
 
     validate:function (rs) {
-        if (!rs.req_props.role){
-            this.on_validate_error(rs, 'No Task');
-        } else  {
+        if (!rs.req_props.role) {
+            this.on_validate_error(rs, 'No Role');
+        } else {
             var self = this;
-            console.log('PROPS: %s', util.inspect(rs.req_props,false, 4));
-            rs.req_props.role._id = rs.req_props.role._id.replace(/[ ]+/g, '_').toLowerCase();
-            console.log('PROPS2: %s', util.inspect(rs.req_props,false, 4));
-            _process_roles(rs.req_props.role);
-            this.models.members_roles.validate(rs.req_props.role, function(err, role){
-                self.on_input(rs, err, role);
+            _process_tasks(rs.req_props.role);
+            this.models.members_roles.validate(rs.req_props.role, function (err, role) {
+                if (err) {
+                    self.on_validate_error(rs, 'cannot validate role: ' + err.toString());
+                } else {
+                    self.on_process(rs, role);
+                }
             })
         }
     },
 
-    _on_validate_error_go: '/admin/member_roles',
-
-    on_input:function (rs, err, role) {
-        if (err){
-            this.on_input_error(rs, 'cannot save role: ' + err.toString());
-        } else {
-           this.on_process(rs, role);
-        }
-    },
-
-    _on_input_error_go: '/admin/member_roles/list',
+    _on_validate_error_go:'/admin/member_roles',
 
     on_process:function (rs, role) {
         var self = this;
-        role.save(function(){
-            self.on_output(rs, role);
+        role.save(function (err) {
+            if (err) {
+                self.on_process_validate_error(rs, err);
+            } else {
+                self.on_output(rs, role);
+            }
         });
     },
 
-    on_output: function(rs, role){
-        rs.flash('info', 'Saved Task ' + role._id.toString());
+    on_output:function (rs, role) {
+        rs.flash('info', 'Saved Role ' + role._id);
         rs.go('/admin/member_roles/list');
     }
 
 }
 
 
-function _process_roles(md){
+function _process_tasks(md) {
     tasks = [];
-    _.each(md.tasks, function(verbs, name){
-        tasks.push({_id: name, verbs:_.toArray(verbs)});
+    _.each(md.tasks, function (verbs, name) {
+        tasks.push({name:name, verbs:_.toArray(verbs)});
     });
     md.tasks = tasks;
 }

@@ -3,7 +3,8 @@
 <div class="block"><h1>Roles</h1>
     <table class="display" id="role_list">
         <thead>
-        <th>Role</th>
+        <th>_id</th>
+        <th>Name</th>
         <th>Label</th>
         </thead>
         <tbody>
@@ -12,7 +13,8 @@
         </tr>
         </tbody>
         <tfoot>
-        <th>Role</th>
+        <th>_id</th>
+        <th>Name</th>
         <th>Label</th>
         </tfoot>
     </table>
@@ -29,9 +31,9 @@
         <form action="/admin/member_role/0/new" class="form_place" method="POST" onsubmit="return check_form(this)">
 <%- partial('form/text_field.html', [{
             id: 'role_form__id',
-            name: 'role[_id]',
+            name: 'role[name]',
             label: 'Name',
-            value: role._id
+            value: role.name
             },
             {
             id: 'role_form_label',

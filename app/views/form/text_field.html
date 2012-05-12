@@ -6,6 +6,7 @@
     <div class="grid_9">
         <div class="block_content">
             <input type="<%= typeof field_type == 'undefined' ? 'text' : type %>" class="i-format" id="<%= textField.id %>"
+                   <% if (textField.readonly){ %> readonly="readonly" <% } %>
                    name="<%= textField.name %>" value="<%= textField.value %>">
         </div>
     </div>

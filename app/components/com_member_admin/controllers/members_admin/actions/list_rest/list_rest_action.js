@@ -74,7 +74,6 @@ module.exports = {
     },
 
     on_process:function (rs, input) {
-        console.log('input: %s', util.inspect(input, true, 3));
         var dis_count = 0;
         var self = this;
         input.query.deleted = {"$ne": true};

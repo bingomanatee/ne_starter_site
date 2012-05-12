@@ -2,8 +2,15 @@ var mm = require('support/mongoose_model');
 var mongoose = require('mongoose');
 
 var task = new mongoose.Schema({
+    _id: mongoose.Schema.ObjectId,
     task: String,
     verbs: [String]
+})
+var role = new mongoose.Schema({
+    _id:{type:String},
+    label:{type:String, required:false},
+    tasks:[task],
+    deleted:Boolean
 })
 
 var schema = new mongoose.Schema({
@@ -12,15 +19,7 @@ var schema = new mongoose.Schema({
     email:{type:String, required:true},
     password:{type:String, required:true},
     deleted: {type: Boolean, "default": false},
-    tasks: [{
-        _id: String,
-        verbs: [String]
-    }],
-    roles: [{
-        _id: String,
-        verbs: [String]
-    }],
-
+    roles: [String]
 });
 
 schema.statics.active = function(cb){

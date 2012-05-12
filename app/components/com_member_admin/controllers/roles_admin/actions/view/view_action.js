@@ -28,6 +28,8 @@ module.exports = {
         this.models.members_roles.get(rs.req_props.id, function (err, role) {
             if (err) {
                 self.on_input_error(rs, 'error getting role ' + rs.req_props.id + ': ' + err.toString());
+            } else if (!role) {
+                self.on_input_error(rs, 'cannot get role ' + rs.req_props.id);
             } else {
                 self.on_output(rs, {role:role });
             }

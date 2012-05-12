@@ -14,17 +14,17 @@
         <%
         var rows = [];
         role.tasks.forEach(function(task){
-            var tr = {label: task._id,
+            var tr = {label: task.name,
         value: task.verbs.join(', ') };
         rows.push(tr);
         });
 
         %>
         <%- partial('ticket/row.html', rows) %>
-        <%- partial('ticket/button_row.html', [
+        <%- partial('form/button_row.html', [
         {class_name: 'medium', label: 'Return to list', link: '/admin/member_roles/list'},
-        {class_name: 'medium orange', label: 'Edit', link: '/admin/member_roles/' + role._id + '/edit'},
-        {class_name: 'medium red', label: 'Delete', link: '/admin/member_roles/' + role._id + '/delete'}
+        {class_name: 'medium orange', label: 'Edit', link: '/admin/member_role/' + role._id + '/edit'},
+        {class_name: 'medium red', label: 'Delete', link: '/admin/member_role/' + role._id + '/delete'}
         ]) %>
     </div>
 </div>

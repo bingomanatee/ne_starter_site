@@ -42,7 +42,7 @@ module.exports = {
         });
     },
 
-    _on_get_input_error_go: '/admin/members_list',
+    _on_get_input_error_go: '/admin/members/list',
 
     on_get_process:function (rs, input) {
         console.log('output: %s', util.inspect(input));

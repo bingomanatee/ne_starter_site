@@ -6,71 +6,15 @@
             <span class="l"></span>
             <span class="r"></span>
         </h2>
-        <section class="form_row">
-            <div class="grid_3">
-                <div class="block_content right">
-                    <b>_id</b>
-                </div>
-            </div>
+        <%- partial('ticket/row.html', [
+        {label: '_id', value: task._id},
+        {label: 'Name', value: task.name},
+        {label: 'Label', value: task.label}]) %>
 
-            <div class="grid_9">
-                <div class="block_content">
-                    <%= task._id %>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </section>
-        <section class="form_row">
-            <div class="grid_3">
-                <div class="block_content right">
-                    <b>label</b>
-                </div>
-            </div>
-
-            <div class="grid_9">
-                <div class="block_content">
-                    <%= task.label %>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </section>
-
-        <section class="form_row">
-            <div class="grid_3">
-                <div class="block_content right">
-                    <b>verbs</b>
-                </div>
-            </div>
-
-            <div class="grid_9">
-                <div class="block_content">
-                    <%- task.verbs.join('<br />') %>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </section>
-
-        <section class="form_row button_row textcenter">
-            <div class="grid_4">
-                <div class="block_content">
-                    <button id="member_form_cancel" class="button medium"
-                            onclick="document.location='/admin/member_tasks/list'">Return to list
-                    </button>
-                </div>
-            </div>
-            <div class="grid_4">
-                <div class="block_content">
-                    <button id="member_form_edit" class="button medium orange"
-                            onclick="document.location='/admin/member_task/<%= task._id %>/edit'">Edit
-                    </button>
-                </div>
-            </div>
-            <div class="grid_4">
-                <div class="block_content">
-                    <button id="member_form_delete" class="button medium red">Delete</button>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </section>
+        <%- partial('form/button_row.html', [
+        {class_name: 'medium', label: 'Return to list', link: '/admin/member_tasks/list'},
+        {class_name: 'medium orange', label: 'Edit', link: '/admin/member_task/' + task._id + '/edit'},
+        {class_name: 'medium red', label: 'Delete', link: '/admin/member_task/' + task._id + '/delete'}
+        ]) %>
     </div>
 </div>
